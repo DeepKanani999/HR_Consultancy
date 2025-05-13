@@ -1068,6 +1068,46 @@ const HomeScreen = () => {
                     <img src="/assets/images/icons/share.png" alt="Share" />
                   </button>
                 </div>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "center",
+                    marginLeft: "20px",
+                  }}
+                >
+                  <button
+                    onClick={() =>
+                      window.open(
+                        "https://g.page/r/CTja04nreWhBEBM/review",
+                        "_blank"
+                      )
+                    }
+                    style={{
+                      padding: "12px 20px",
+                      border: "1px solid #e0e0e0",
+                      borderRadius: "8px",
+                      backgroundColor: "white",
+                      display: "flex",
+                      alignItems: "center",
+                      fontSize: "16px",
+                      fontWeight: "500",
+                      color: "#333",
+                      boxShadow: "0 2px 4px rgba(0,0,0,0.05)",
+                    }}
+                  >
+                    <img
+                      src="/assets/images/icons/google.png"
+                      alt="Google Reviews"
+                      style={{
+                        height: "30px",
+                        width: "30px",
+                        marginRight: "12px",
+                      }}
+                    />
+                    Rate Us
+                  </button>
+                </div>
               </div>
             </div>
 
