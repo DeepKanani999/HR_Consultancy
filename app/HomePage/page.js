@@ -626,7 +626,7 @@ const HomeScreen = () => {
           <button
             onClick={() =>
               window.open(
-                "https://www.google.com/maps/place/Rajkot,+Gujarat",
+                "https://g.page/r/CTja04nreWhBEBM/review",
                 "_blank"
               )
             }
