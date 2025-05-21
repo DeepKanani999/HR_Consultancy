@@ -56,7 +56,7 @@ const ListingDetailsRight = () => {
     const body = encodeURIComponent(
       "Hello, I am interested in your products. Please share more details."
     );
-    window.location.href = `mailto:info@shapingteam.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:info.plixon.in?subject=${subject}&body=${body}`;
   };
 
   const handleShare = async () => {
@@ -325,12 +325,12 @@ const ListingDetailsRight = () => {
               <div className="my-3">
                 <button
                   className="btn p-0 text-decoration-none d-flex align-items-center"
-                  onClick={() => {
+                  onClick={() =>
                     window.open(
-                      "https://www.google.com/maps/place/Rajkot,+Gujarat",
+                      "https://g.page/r/CTja04nreWhBEBM/review",
                       "_blank"
-                    );
-                  }}
+                    )
+                  }
                 >
                   <div className="flex items-center bg-transparent rounded-lg hover:bg-gray-100 transition">
                     <i className="ti-star me-2 mx-2" />

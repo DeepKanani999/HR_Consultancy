@@ -629,10 +629,7 @@ const HomeScreen = () => {
         >
           <button
             onClick={() =>
-              window.open(
-                "https://www.google.com/maps/place/Rajkot,+Gujarat",
-                "_blank"
-              )
+              window.open("https://g.page/r/CTja04nreWhBEBM/review", "_blank")
             }
             style={{
               padding: "12px 20px",
@@ -1082,12 +1079,12 @@ const HomeScreen = () => {
                   <button
                     onClick={() =>
                       window.open(
-                        "https://www.google.com/maps/place/Rajkot,+Gujarat",
+                        "https://g.page/r/CTja04nreWhBEBM/review",
                         "_blank"
                       )
                     }
                     style={{
-                      padding: "12px 20px",
+                      padding: "12px 40px",
                       border: "1px solid #e0e0e0",
                       borderRadius: "8px",
                       backgroundColor: "white",
@@ -1097,6 +1094,7 @@ const HomeScreen = () => {
                       fontWeight: "500",
                       color: "#333",
                       boxShadow: "0 2px 4px rgba(0,0,0,0.05)",
+                      fontWeight: "bold",
                     }}
                   >
                     <img
