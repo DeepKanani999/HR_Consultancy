@@ -15,6 +15,7 @@ export const products = [
       "HR Strategy Consulting",
       "Remote Team Support",
     ],
+    service: "Recruitment & Talent Acquisition",
     backgroundColor: "#D4AFB9",
   },
   {
@@ -40,6 +41,7 @@ Overall, the Plixon Android Smart TV combines smart connectivity, user-friendly 
       "Policy Drafting",
       "Audit Preparation",
     ],
+    service: "HR Policy Development & Compliance",
     backgroundColor: "#0471A6",
   },
   {
@@ -60,6 +62,7 @@ All in all, this feature-packed TV brings together reliable HD performance and v
       "Payroll Processing",
       "Employee Onboarding",
     ],
+    service: "Performance Management & Training",
     backgroundColor: "#F9DF74",
   },
 ];

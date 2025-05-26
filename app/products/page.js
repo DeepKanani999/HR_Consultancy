@@ -73,7 +73,7 @@ const Products = () => {
 
   return (
     <Layout>
-      <PageBanner title={"Products"} />
+      <PageBanner title={"Services"} />
       <section className="products-area pt-120 pb-120">
         <div
           className={`floating-social-bar ${showBar ? "visible" : ""}`}
@@ -567,11 +567,11 @@ const Products = () => {
                         </span>
                       </div>
                       <div className="listing-content">
-                        {/* <h3 className="title">
+                        <h3 className="title">
                           <Link href={`/product-details/${val.slug}`}>
-                            {val.name}
+                            {val.service}
                           </Link>{" "}
-                        </h3> */}
+                        </h3>
                         <p
                           style={{
                             display: "-webkit-box",

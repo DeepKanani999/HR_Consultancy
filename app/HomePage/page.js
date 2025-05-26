@@ -196,6 +196,42 @@ const HomeScreen = () => {
   const [visible, setVisible] = useState(true);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [deferredPrompt, setDeferredPrompt] = useState(null);
+
+  useEffect(() => {
+    const handler = (e) => {
+      // Intercept the event and store it
+      e.preventDefault();
+      setDeferredPrompt(e);
+      console.log("✅ beforeinstallprompt event captured");
+    };
+
+    window.addEventListener("beforeinstallprompt", handler);
+
+    return () => window.removeEventListener("beforeinstallprompt", handler);
+  }, []);
+
+  const handleAddToHomeScreen = async () => {
+    if (!deferredPrompt) {
+      console.log("⚠️ Install prompt not available");
+      return;
+    }
+
+    // Show the prompt
+    deferredPrompt.prompt();
+
+    const result = await deferredPrompt.userChoice;
+    console.log("👉 User response:", result.outcome);
+
+    if (result.outcome === "accepted") {
+      console.log("✅ User accepted the install prompt");
+    } else {
+      console.log("❌ User dismissed the install prompt");
+    }
+
+    // Clear the saved prompt since it can't be used again
+    setDeferredPrompt(null);
+  };
 
   const [isMobile, setIsMobile] = useState(false);
 
@@ -1470,11 +1506,11 @@ const HomeScreen = () => {
                           </span>
                         </div>
                         <div className="listing-content">
-                          {/* <h3 className="title">
+                          <h3 className="title">
                             <Link href={`/product-details/${product.slug}`}>
-                              {product.name}
+                              {product.service}
                             </Link>
-                          </h3> */}
+                          </h3>
                           <p
                             style={{
                               display: "-webkit-box",
