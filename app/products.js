@@ -10,8 +10,12 @@ export const products = [
     discription:
       "Experience stunning clarity and vibrant visuals with Plixon's Crystal-Clear HD Display, featuring a resolution of 1366 x 768 pixels. Whether you're watching your favorite movies, streaming shows, or diving into casual gaming, the HD display ensures sharp imagery and lifelike color reproduction that brings every scene to life. Designed with modern multimedia needs in mind, the TV offers a wide range of connectivity options to ensure seamless integration with your devices. It includes two HDMI ports, allowing you to effortlessly connect set-top boxes, gaming consoles, or streaming sticks for a more immersive viewing experience. Two USB ports enable quick access to your favorite music, videos, or photos, directly from your pen drive or hard drive. The AV input supports compatibility with older media players, such as DVD players, ensuring you don’t have to part with your classic devices. Additionally, the COAX input caters to traditional cable TV or RF-based connections, while the VGA port lets you connect your laptop or desktop for a bigger screen experience — ideal for presentations or entertainment. For personal audio enjoyment, the headphone out jack provides the convenience of private listening through headphones or external speakers. Altogether, this well-rounded configuration transforms your Plixon Smart TV into a central hub for entertainment, work, and leisure — blending versatility, performance, and ease of use into one smart display solution.",
     usability: ["Small bedroom TV", "Compact Office", "Kitchen TV"],
-    specification: ["Smart TV"],
-    backgroundColor: "#D4AFB9"
+    specification: [
+      "Performance Management",
+      "HR Strategy Consulting",
+      "Remote Team Support",
+    ],
+    backgroundColor: "#D4AFB9",
   },
   {
     id: "plx-002",
@@ -26,9 +30,17 @@ Connectivity is a strong suit of this Smart TV, offering built-in Wi-Fi and Hots
 In terms of I/O options, the TV includes 2 USB ports, 2 HDMI ports for high-definition video/audio input, an RJ45 Ethernet port for wired internet connectivity, and AV input to connect traditional media players or consoles. Audio is delivered through stereo speakers, providing balanced and immersive sound for everyday entertainment.
 Overall, the Plixon Android Smart TV combines smart connectivity, user-friendly features, and a Full HD viewing experience, making it a versatile and reliable centerpiece for your home entertainment system.
 `,
-    usability: ["Small bedroom TV", "Compact Office", "Kitchen TV"],
-    specification: ["Android 11", "512MB-RAM", "4GB-ROM"],
-    backgroundColor: "#0471A6"
+    usability: [
+      "Compliance Audits",
+      "Performance Reviews",
+      "Employee Onboarding",
+    ],
+    specification: [
+      "Labor Law Guidance",
+      "Policy Drafting",
+      "Audit Preparation",
+    ],
+    backgroundColor: "#0471A6",
   },
   {
     id: "plx-003",
@@ -42,8 +54,12 @@ Overall, the Plixon Android Smart TV combines smart connectivity, user-friendly 
 To enhance connectivity and versatility, this TV is equipped with multiple input options. It features 2 HDMI ports, allowing you to connect devices like set-top boxes, gaming consoles, or streaming devices with ease. 2 USB ports provide plug-and-play access to movies, music, and photos directly from USB drives. The AV In port supports older media devices such as DVD players, offering backward compatibility for your classic content. For those still using cable TV or RF-based sources, the COAX input ensures seamless connection. Additionally, the VGA port allows you to connect a computer or laptop, turning the TV into a large secondary monitor — perfect for work or presentations. The Headphone Out jack offers private listening, letting you enjoy your content without disturbing others by using wired headphones or external speakers.
 All in all, this feature-packed TV brings together reliable HD performance and versatile connectivity, making it a smart choice for modern households.
 `,
-    usability: ["Small bedroom TV", "Gaming monitor", "Guest room TV"],
-    specification: ["Smart TV"],
-    backgroundColor: "#F9DF74"
+    usability: ["Small Businesses", "Growing Teams", "Hybrid Workplaces"],
+    specification: [
+      "Recruitment Support",
+      "Payroll Processing",
+      "Employee Onboarding",
+    ],
+    backgroundColor: "#F9DF74",
   },
 ];

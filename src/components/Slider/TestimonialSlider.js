@@ -26,7 +26,7 @@ export default class TestimoinalSlider extends Component {
           ref={(slider) => (this.slider2 = slider)}
           dots={false}
           arrows={false}
-          autoplaySpeed={1500}
+          autoplaySpeed={3000}
           focusOnSelect={true}
           autoplay={true}
           slidesToShow={3}
@@ -35,25 +35,25 @@ export default class TestimoinalSlider extends Component {
         >
           <div className="single-thumb">
             <img
-              src="assets/images/testimonial/tm-thumb-1.jpg"
+              src="/assets/images/testimonial/tm-thumb-1.jpg"
               alt="testimonial thumb"
             />
           </div>
           <div className="single-thumb">
             <img
-              src="assets/images/testimonial/tm-thumb-2.jpg"
+              src="/assets/images/testimonial/tm-thumb-2.jpg"
               alt="testimonial thumb"
             />
           </div>
           <div className="single-thumb">
             <img
-              src="assets/images/testimonial/tm-thumb-3.jpg"
+              src="/assets/images/testimonial/tm-thumb-3.jpg"
               alt="testimonial thumb"
             />
           </div>
           <div className="single-thumb">
             <img
-              src="assets/images/testimonial/tm-thumb-2.jpg"
+              src="/assets/images/testimonial/tm-thumb-2.jpg"
               alt="testimonial thumb"
             />
           </div>
@@ -64,7 +64,7 @@ export default class TestimoinalSlider extends Component {
           dots={false}
           arrows={false}
           infinite={true}
-          autoplaySpeed={1500}
+          autoplaySpeed={3000}
           autoplay={true}
           fade={true}
           slidesToShow={1}

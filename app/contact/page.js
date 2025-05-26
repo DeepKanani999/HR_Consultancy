@@ -63,15 +63,15 @@ const Contact = () => {
   }, []);
 
   const handleCall = () => {
-    window.location.href = "tel:+917779096777"; // Replace with your number
+    window.location.href = "tel:+917984348404"; // Replace with your number
   };
 
   const handleLocation = () => {
-    window.open("https://maps.app.goo.gl/DV8NxwoPHecb7eh4A", "_blank");
+    window.open("https://g.co/kgs/NVpSRxo", "_blank");
   };
 
   const handleWhatsApp = () => {
-    window.open("https://wa.me/917779096777", "_blank"); // Replace with your number
+    window.open("https://wa.me/917984348404", "_blank"); // Replace with your number
   };
 
   const handleMail = () => {
@@ -429,8 +429,8 @@ const Contact = () => {
                   <div className="info">
                     <h5>Address</h5>
                     <p>
-                      M-167, 4, Gujarat Housing Board Society, Bh. Angle Madras,
-                      Cafe Akshar Marg, Near Amin Marg, Rajkot - 360001
+                      D-103, Silver Hormony, S.G. Highway, Gota, Ahmedabad.
+                      Gujarat, India - 382481
                     </p>
                   </div>
                 </div>
@@ -441,7 +441,7 @@ const Contact = () => {
                   <div className="info">
                     <h5>Phone</h5>
                     <p>
-                      <a href="tel:+91 77790 96777">+91 77790 96777</a>
+                      <a href="tel:+91 79843 48404">+91 79843 48404</a>
                     </p>
                   </div>
                 </div>
@@ -452,7 +452,9 @@ const Contact = () => {
                   <div className="info">
                     <h5>Email</h5>
                     <p>
-                      <a href="mailto:info@plixon.in">info@plixon.in</a>
+                      <a href="mailto:info@shapingteam.com">
+                        info@shapingteam.com
+                      </a>
                     </p>
                   </div>
                 </div>
@@ -552,7 +554,7 @@ const Contact = () => {
       {/*====== Start Map section ======*/}
       <div className="contact-page-map">
         <div className="map-box">
-          <iframe src="https://maps.google.com/maps?q=rajkot&t=&z=13&ie=UTF8&iwloc=&output=embed" />
+          <iframe src="https://maps.google.com/maps?q=ahmedabad+gota&t=&z=13&ie=UTF8&iwloc=&output=embed" />
         </div>
       </div>
       {/*====== End Map section ======*/}
