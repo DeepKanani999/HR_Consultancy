@@ -70,15 +70,15 @@ const ProductDetailsClient = ({ item }) => {
   }, []);
 
   const handleCall = () => {
-    window.location.href = "tel:+917779096777"; // Replace with your number
+    window.location.href = "tel:+917984348404"; // Replace with your number
   };
 
   const handleLocation = () => {
-    window.open("https://maps.app.goo.gl/DV8NxwoPHecb7eh4A", "_blank");
+    window.open("https://g.co/kgs/NVpSRxo", "_blank");
   };
 
   const handleWhatsApp = () => {
-    const phoneNumber = "917779096777"; // Replace with your number
+    const phoneNumber = "917984348404"; // Replace with your number
     const defaultMessage = `Hi, I'm interested in your products. Could you please provide more details?`;
 
     const encodedMessage = encodeURIComponent(defaultMessage);
@@ -89,7 +89,7 @@ const ProductDetailsClient = ({ item }) => {
   };
 
   const handleMail = () => {
-    window.location.href = "mailto:info@plixon.in"; // Replace with your email
+    window.location.href = "mailto:info@shapingteam.com"; // Replace with your email
   };
 
   const handleFacebook = () => {
@@ -147,7 +147,7 @@ const ProductDetailsClient = ({ item }) => {
 
     const userInfo = sessionStorage.getItem("userInfo");
     if (isMobile) {
-      const phoneNumber = "917779096777";
+      const phoneNumber = "917984348404";
       const imageUrl = `https://plixon.in/${item?.image}`;
 
       // Create a message with product details and image URL
@@ -180,7 +180,7 @@ const ProductDetailsClient = ({ item }) => {
       if (!userInfo) {
         setIsPopupOpen(true);
       } else {
-        const phoneNumber = "917779096777";
+        const phoneNumber = "917984348404";
 
         // Create a message with product details and image URL
         const message = `*Product Inquiry*
@@ -463,7 +463,7 @@ const ProductDetailsClient = ({ item }) => {
                 style={{ paddingLeft: "30px" }}
               >
                 <div className="product-info mt-30">
-                  <h3 className="title">{item?.name}</h3>
+                  {/* <h3 className="title">{item?.name}</h3> */}
                   <span>{item?.detail}</span>
                   <button
                     onClick={() => {
@@ -746,16 +746,16 @@ const ProductDetailsClient = ({ item }) => {
                     </span>
                   </div>
                   <div className="listing-content">
-                    <h3 className="title">
+                    {/* <h3 className="title">
                       <Link href={`/product-details/${item.slug}`}>
                         {item.name}
                       </Link>{" "}
-                    </h3>
+                    </h3> */}
                     <p
                       style={{
                         display: "-webkit-box",
                         WebkitBoxOrient: "vertical",
-                        WebkitLineClamp: 3,
+                        WebkitLineClamp: 5,
                         overflow: "hidden",
                         textOverflow: "ellipsis",
                         maxWidth: "300px",
@@ -765,7 +765,7 @@ const ProductDetailsClient = ({ item }) => {
                     >
                       {item.detail}
                     </p>{" "}
-                    <div className="features-list">
+                    {/* <div className="features-list">
                       <ul>
                         {" "}
                         <li
@@ -778,7 +778,7 @@ const ProductDetailsClient = ({ item }) => {
                           {"Smart TV"}
                         </li>
                       </ul>
-                    </div>
+                    </div> */}
                     <span className="phone-meta"></span>
                     <div className="listing-meta">
                       <ul

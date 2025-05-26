@@ -43,7 +43,7 @@ const Header2 = () => {
                   </nav>
                 </div>
               </div>
-              <div className="col-lg-4 col-5">
+              {/* <div className="col-lg-4 col-5">
                 <div className="header-right-nav">
                   <ul className="d-flex align-items-center">
                     <li className="nav-btn">
@@ -56,7 +56,7 @@ const Header2 = () => {
                     </li>
                   </ul>
                 </div>
-              </div>
+              </div> */}
               <RetailerPopup
                 visible={showPopup}
                 onClose={() => setShowPopup(false)}

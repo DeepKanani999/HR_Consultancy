@@ -2,8 +2,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Plixon - Premium Smart TVs",
-  description: "Discover premium Smart TVs with stunning visuals, advanced features, and unbeatable prices. Experience entertainment like never before with Plixon.",
+  title: "Shaping Team - Expert HR Consultancy Services",
+  description: "Discover professional HR solutions including recruitment, payroll, compliance, and more. Empower your business with tailored, efficient, and scalable HR services from SmartHR.",
   manifest: "/manifest.json", // Path to the PWA manifest file
 };
 

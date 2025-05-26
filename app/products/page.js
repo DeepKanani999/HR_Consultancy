@@ -567,16 +567,16 @@ const Products = () => {
                         </span>
                       </div>
                       <div className="listing-content">
-                        <h3 className="title">
+                        {/* <h3 className="title">
                           <Link href={`/product-details/${val.slug}`}>
                             {val.name}
                           </Link>{" "}
-                        </h3>
+                        </h3> */}
                         <p
                           style={{
                             display: "-webkit-box",
                             WebkitBoxOrient: "vertical",
-                            WebkitLineClamp: 3,
+                            WebkitLineClamp: 5,
                             overflow: "hidden",
                             textOverflow: "ellipsis",
                             maxWidth: "300px",
@@ -586,7 +586,7 @@ const Products = () => {
                         >
                           {val.detail}
                         </p>{" "}
-                        <div className="features-list">
+                        {/* <div className="features-list">
                           <ul>
                             {" "}
                             <li
@@ -599,7 +599,7 @@ const Products = () => {
                               {"Smart TV"}
                             </li>
                           </ul>
-                        </div>
+                        </div> */}
                         <span className="phone-meta"></span>
                         <div className="listing-meta">
                           <ul

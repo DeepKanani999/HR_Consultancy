@@ -67,14 +67,14 @@ const About = () => {
   }, []);
 
   const handleCall = () => {
-    window.location.href = "tel:+917779096777"; // Replace with your number
+    window.location.href = "tel:+917984348404"; // Replace with your number
   };
 
   const handleLocation = () => {
-    window.open("https://maps.app.goo.gl/DV8NxwoPHecb7eh4A", "_blank");
+    window.open("https://g.co/kgs/NVpSRxo", "_blank");
   };
   const handleWhatsApp = () => {
-    const phoneNumber = "917779096777"; // Replace with your number
+    const phoneNumber = "917984348404"; // Replace with your number
     const defaultMessage = `Hi, I'm interested in your products. Could you please provide more details?`;
 
     const encodedMessage = encodeURIComponent(defaultMessage);
@@ -406,10 +406,10 @@ const About = () => {
                   <div className="content">
                     <h3 className="title">User-Friendly Experience</h3>
                     <p>
-                      At Plixon, our Smart TVs are designed for effortless
-                      usability — with intuitive interfaces, smooth navigation,
-                      and instant access to all your favorite streaming apps and
-                      features.
+                      At our HR Consultancy, we make managing human resources
+                      simple and stress-free — with easy-to-understand
+                      solutions, clear processes, and personalized support at
+                      every step.
                     </p>
                     {/* <Link className="btn-link icon-btn" href="/how-work">
                       More Details
@@ -426,11 +426,12 @@ const About = () => {
                     <i className="flaticon-gift-box" />
                   </div>
                   <div className="content">
-                    <h3 className="title">Exciting Daily Deals</h3>
+                    <h3 className="title">Exciting Daily Insights</h3>
                     <p>
-                      Enjoy unbeatable value every day. Plixon offers exclusive
-                      daily deals on high-performance Smart TVs, giving you
-                      premium quality at pocket-friendly prices.
+                      Get access to the latest HR trends, recruitment tips, and
+                      compliance updates. We provide valuable daily insights to
+                      help your business stay ahead and make smarter HR
+                      decisions.
                     </p>
                     {/* <Link className="btn-link icon-btn" href="/how-work">
                       More Details
@@ -447,12 +448,12 @@ const About = () => {
                     <i className="flaticon-laptop" />
                   </div>
                   <div className="content">
-                    <h3 className="title">Smart & Quick Search</h3>
+                    <h3 className="title">Smart & Quick Hiring</h3>
                     <p>
-                      Say goodbye to endless scrolling. With Plixon’s advanced
-                      filters and intelligent search, find your perfect Smart TV
-                      match in seconds — tailored to your preferences and
-                      budget.
+                      No more wasting time on unqualified applicants. Our
+                      intelligent talent-matching system and efficient screening
+                      tools help you find the right candidates quickly — based
+                      on your exact hiring needs.
                     </p>
                     {/* <Link className="btn-link icon-btn" href="/how-work">
                       More Details
@@ -469,12 +470,12 @@ const About = () => {
                     <i className="flaticon-headphone" />
                   </div>
                   <div className="content">
-                    <h3 className="title">24/7 Live Support</h3>
+                    <h3 className="title">24/7 Expert Support</h3>
                     <p>
-                      Need help? Our dedicated support team is always ready to
-                      assist — whether it’s setup guidance, feature
-                      explanations, or product inquiries. At Plixon, we’re just
-                      a click away.
+                      Have questions? Our HR professionals are available around
+                      the clock — whether you need help with policies, hiring
+                      strategies, or compliance concerns. We're always just a
+                      call or message away.
                     </p>
                     {/* <Link className="btn-link icon-btn" href="/how-work">
                       More Details
@@ -504,12 +505,9 @@ const About = () => {
                 <div className="features-content-box features-content-box-one">
                   <div className="section-title section-title-left mb-30 wow fadeInUp">
                     <span className="sub-title">Our Speciality</span>
-                    <h2>Experience Entertainment Like Never Before</h2>
+                    <h2>Experience HR that Delivers Impact</h2>
                   </div>
-                  <h5>
-                    Enjoy stunning visuals, rich sound, and seamless
-                    connectivity with Plixon Smart TVs.
-                  </h5>
+                  <h5>Where people performance meets future-ready thinking.</h5>
                   <ul className="features-list-one">
                     <li
                       className="list-item wow fadeInUp"
@@ -521,8 +519,8 @@ const About = () => {
                       <div className="content">
                         <h5>Perfect Match, Effortlessly</h5>
                         <p>
-                          From compact to cinematic, find the TV that fits your
-                          space and style with ease.
+                          Empowering individuals and teams to thrive, grow, and
+                          lead.
                         </p>
                       </div>
                     </li>
@@ -536,8 +534,8 @@ const About = () => {
                       <div className="content">
                         <h5>Smart & Simple Selection</h5>
                         <p>
-                          User-friendly tools help you compare and choose
-                          confidently.
+                          Transforming talent into a competitive advantage
+                          through strategic HR solutions.
                         </p>
                       </div>
                     </li>
@@ -551,8 +549,7 @@ const About = () => {
                       <div className="content">
                         <h5>24/7 Expert Support</h5>
                         <p>
-                          Instant help is always a click away for any product
-                          questions.
+                          Expert HR guidance available whenever you need it.
                         </p>
                       </div>
                     </li>
@@ -565,10 +562,10 @@ const About = () => {
                 <div className="content">
                   <h5>Our Vision</h5>
                   <p>
-                    To revolutionize home entertainment by making smart,
-                    connected, and immersive viewing experiences accessible to
-                    every household—empowering people to see the world in
-                    extraordinary clarity and convenience.
+                    To be the most trusted and innovative HR consultancy,
+                    empowering organizations and individuals to thrive through
+                    people-first solutions, strategic insight, and
+                    transformative partnerships.
                   </p>
                 </div>
               </div>
@@ -576,12 +573,11 @@ const About = () => {
                 <div className="content">
                   <h5>Our Mission</h5>
                   <p>
-                    At Plixon, our mission is to innovate relentlessly and
-                    deliver cutting-edge Smart TVs that combine elegance,
-                    intelligence, and ease of use. We aim to enhance everyday
-                    living through technology that’s intuitive, reliable, and
-                    enriching—backed by exceptional support, sustainable
-                    practices, and a customer-first mindset.
+                    To deliver exceptional HR services that align talent with
+                    opportunity, foster workplace excellence, and drive
+                    sustainable growth for our clients. We are committed to
+                    supporting businesses and job seekers through ethical,
+                    responsive, and results-driven human resource solutions.
                   </p>
                 </div>
               </div>
@@ -599,22 +595,30 @@ const About = () => {
           <div className="container">
             <div className="row align-items-center">
               <div className="col-lg-7">
-                <div className="company-name wow fadeInLeft">Plixon</div>
+                <div
+                  className="company-name wow fadeInLeft"
+                  style={{ fontSize: "150px" }}
+                >
+                  Shaping Team
+                </div>
               </div>
               <div className="col-lg-5">
                 <div className="cta-content-box wow fadeInRight">
-                  <h2>Experience Best Display Technology</h2>
+                  <h2>Experience Next-Level Human Potential</h2>
                   <p>
-                    Superior TV collection featuring crystal-clear resolution
-                    and immersive sound that transforms your viewing into a
-                    cinema-like experience.
+                    Human-centered HR expertise combining deep industry insight
+                    and customized solutions that turn your workforce into your
+                    greatest competitive advantage.
                   </p>
                   <a
                     onClick={() => {
                       const link = document.createElement("a");
-                      link.href = "/assets/images/Plixon-Catalogue-Digital.pdf";
-                      link.download = "Plixon-Catalogue-Digital.pdf"; // Optional: Specify the file name
+                      link.href = "/assets/images/HR_Consultancy.pptx";
+                      link.target = "_blank"; // Open in a new tab
+                      link.rel = "noopener noreferrer"; // Security best practice
+                      document.body.appendChild(link);
                       link.click();
+                      document.body.removeChild(link);
                     }}
                     className="main-btn"
                     style={{
@@ -627,7 +631,7 @@ const About = () => {
                       marginTop: "10px",
                     }}
                   >
-                    Download Catalogue
+                    View Services
                   </a>
                 </div>
               </div>
@@ -722,7 +726,7 @@ const About = () => {
                               document.getElementById("whatsappMessage").value;
                             const encodedMessage = encodeURIComponent(message);
                             // Replace with your actual WhatsApp number (with country code, remove +)
-                            const whatsappNumber = "917779096777";
+                            const whatsappNumber = "917984348404";
                             window.open(
                               `https://wa.me/${whatsappNumber}?text=${encodedMessage}`,
                               "_blank"
