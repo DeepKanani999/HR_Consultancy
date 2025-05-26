@@ -1305,7 +1305,7 @@ const HomeScreen = () => {
 
                 {/* Share */}
                 <button
-                  onClick={handleShare}
+                  onClick={handleAddToHomeScreen}
                   style={{
                     display: "flex",
                     flexDirection: "row",
