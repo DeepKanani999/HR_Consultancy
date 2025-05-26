@@ -235,7 +235,7 @@ const ProductDetailsClient = ({ item }) => {
           <UserInfoPopup isOpen={isPopupOpen} onClose={handleClosePopup} />
         </div>
       )}
-      <PageBanner title="Product Detail" />
+      <PageBanner title="Service Detail" />
       <section className="product-details-section pt-120 pb-115">
         <div
           className={`floating-social-bar ${showBar ? "visible" : ""}`}
@@ -463,7 +463,7 @@ const ProductDetailsClient = ({ item }) => {
                 style={{ paddingLeft: "30px" }}
               >
                 <div className="product-info mt-30">
-                  {/* <h3 className="title">{item?.name}</h3> */}
+                  <h3 className="title">{item.service}</h3>
                   <span>{item?.detail}</span>
                   <button
                     onClick={() => {
@@ -746,11 +746,11 @@ const ProductDetailsClient = ({ item }) => {
                     </span>
                   </div>
                   <div className="listing-content">
-                    {/* <h3 className="title">
+                    <h3 className="title">
                       <Link href={`/product-details/${item.slug}`}>
-                        {item.name}
+                        {item.service}
                       </Link>{" "}
-                    </h3> */}
+                    </h3>
                     <p
                       style={{
                         display: "-webkit-box",
