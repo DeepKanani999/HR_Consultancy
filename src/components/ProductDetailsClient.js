@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from "react";
 import PageBanner from "./PageBanner";
-import { Nav, Tab } from "react-bootstrap";
+import { Nav } from "react-bootstrap";
 import Slider from "react-slick";
 import { reletedProductSlider } from "@/sliderProps";
 import Link from "next/link";
-import { products } from "@/products";
+import { services } from "@/services";
 import UserInfoPopup from "./userDetailPopup";
 
 const ProductDetailsClient = ({ item }) => {
@@ -298,7 +298,7 @@ const ProductDetailsClient = ({ item }) => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/phone_black.png"
+                      src="/assets/images/black-icons/Call-Us.svg"
                       alt="Call"
                       style={{ height: "20px", width: "20px" }}
                     />
@@ -328,7 +328,7 @@ const ProductDetailsClient = ({ item }) => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/location_black.png"
+                      src="/assets/images/black-icons/Location.svg"
                       alt="Call"
                       style={{ height: "20px", width: "20px" }}
                     />
@@ -369,7 +369,7 @@ const ProductDetailsClient = ({ item }) => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/whatsapp_black.png"
+                      src="/assets/images/black-icons/whatsapp.svg"
                       alt="Call"
                       style={{ height: "20px", width: "20px" }}
                     />
@@ -399,7 +399,7 @@ const ProductDetailsClient = ({ item }) => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/gmail_black.png"
+                      src="/assets/images/black-icons/email.svg"
                       alt="Call"
                       style={{ height: "20px", width: "20px" }}
                     />
@@ -410,36 +410,32 @@ const ProductDetailsClient = ({ item }) => {
 
               {/* Right Section: Rounded Social Buttons */}
               <div style={{ display: "flex", gap: "10px" }}>
-                <button
-                  className="social-rounded-btn"
-                  onClick={handleFacebook}
-                  style={{ padding: "8px", backgroundColor: "#3A559F" }}
-                >
-                  <img src="/assets/images/icons/facebook.png" alt="Facebook" />
-                </button>
-                <button
-                  className="social-rounded-btn"
-                  onClick={handleInstagram}
-                  style={{ padding: "8px", backgroundColor: "#D03B98" }}
-                >
+                <button className="social-rounded-btn" onClick={handleFacebook}>
                   <img
-                    src="/assets/images/icons/instagram.png"
-                    alt="Instagram"
+                    src="/assets/images/social-media-icons/Facebook.svg"
+                    alt="Facebook"
                   />
                 </button>
                 <button
                   className="social-rounded-btn"
-                  onClick={handleLinkedIn}
-                  style={{ padding: "8px", backgroundColor: "#0B63BD" }}
+                  onClick={handleInstagram}
                 >
-                  <img src="/assets/images/icons/linkedin.png" alt="LinkedIn" />
+                  <img
+                    src="/assets/images/social-media-icons/Instagram.svg"
+                    alt="Instagram"
+                  />
                 </button>
-                <button
-                  className="social-rounded-btn"
-                  onClick={handleShare}
-                  style={{ padding: "8px", backgroundColor: "#00ADFF" }}
-                >
-                  <img src="/assets/images/icons/share.png" alt="Share" />
+                <button className="social-rounded-btn" onClick={handleLinkedIn}>
+                  <img
+                    src="/assets/images/social-media-icons/Linkedin.svg"
+                    alt="LinkedIn"
+                  />
+                </button>
+                <button className="social-rounded-btn" onClick={handleShare}>
+                  <img
+                    src="/assets/images/social-media-icons/Share.svg"
+                    alt="Share"
+                  />
                 </button>
               </div>
             </div>
@@ -566,7 +562,7 @@ const ProductDetailsClient = ({ item }) => {
                           <li className="review">
                             <div className="review-thumb">
                               <img
-                                src="/assets/images/products/review-thumb-1.jpg"
+                                src="/assets/images/testimonial/feedback-user-2.jpg"
                                 alt="review thumb"
                               />
                             </div>
@@ -605,7 +601,7 @@ const ProductDetailsClient = ({ item }) => {
                           <li className="review">
                             <div className="review-thumb">
                               <img
-                                src="/assets/images/products/review-thumb-2.jpg"
+                                src="/assets/images/testimonial/feedback-user-1.jpg"
                                 alt="review thumb"
                               />
                             </div>
@@ -643,7 +639,25 @@ const ProductDetailsClient = ({ item }) => {
                           </li>
                         </ul>
                       </div>
-                      <div className="products-review-form">
+                      <div
+                        style={{
+                          justifyContent: "center",
+                          alignItems: "center",
+                          display: "flex",
+                          marginBottom: "50px",
+                        }}
+                      >
+                        <button
+                          className="main-btn"
+                          onClick={
+                            handleLocation
+                            // window.open("https://g.page/r/CTjtIU0PHHR6EBM/review", "_blank")
+                          }
+                        >
+                          Give Us a Review
+                        </button>
+                      </div>
+                      {/* <div className="products-review-form">
                         <h4 className="title">Leave Your Reviews</h4>
                         <form onSubmit={(e) => e.preventDefault()}>
                           <div className="row">
@@ -709,7 +723,7 @@ const ProductDetailsClient = ({ item }) => {
                             </div>
                           </div>
                         </form>
-                      </div>
+                      </div> */}
                     </div>
                   )}
                 </div>
@@ -722,7 +736,7 @@ const ProductDetailsClient = ({ item }) => {
               {...reletedProductSlider}
               className="releted-products-slider-one"
             >
-              {products.map((item) => (
+              {services.map((item) => (
                 <div className="listing-item listing-grid-item-two">
                   <div
                     className="listing-thumbnail"
@@ -730,12 +744,16 @@ const ProductDetailsClient = ({ item }) => {
                       backgroundColor: item.backgroundColor,
                       borderTopLeftRadius: "10px",
                       borderTopRightRadius: "10px",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      display: "flex",
                     }}
                   >
                     <Link href={`/product-details/${item.slug}`}>
                       <img
                         src={item.image} // <-- Update TV image here
                         alt="TV Product Image"
+                        style={{ objectFit: "cover", width: "100%" }}
                       />
                     </Link>
                     <span
@@ -799,9 +817,9 @@ const ProductDetailsClient = ({ item }) => {
                             }}
                           >
                             <div
-                              className="flex items-center gap-2 px-3 py-1 mt-1 mb-4 border border-gray-300 rounded-lg transition"
+                              className="flex items-center gap-2 px-3 py-1 mt-1 mb-4 rounded transition"
                               style={{
-                                backgroundColor: "#69C8C7",
+                                border: "1px solid #69C8C7",
                                 display: "flex",
                                 flexDirection: "row",
                                 alignItems: "center",
@@ -811,8 +829,8 @@ const ProductDetailsClient = ({ item }) => {
                               }}
                             >
                               <span
-                                className="underline text-white"
-                                style={{ fontSize: "20px" }}
+                                className="underline"
+                                style={{ fontSize: "17px", color: "#69C8C7" }}
                               >
                                 View Details
                               </span>

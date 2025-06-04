@@ -9,8 +9,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React from "react";
-import styles from "../../styles/style.css";
-import { products } from "@/products";
+import { services } from "@/services";
 import BottomTab from "@/components/BottomBar";
 import UserInfoPopup from "@/components/userDetailPopup";
 
@@ -531,7 +530,7 @@ const HomeScreen = () => {
           <button onClick={handleCall} style={buttonStyle}>
             <div style={iconWrapperStyle}>
               <img
-                src="/assets/images/black-icons/phone_black.png"
+                src="/assets/images/black-icons/Call-Us.svg"
                 alt="Call"
                 style={{ height: "20px", width: "20px" }}
               />
@@ -553,7 +552,7 @@ const HomeScreen = () => {
           >
             <div style={iconWrapperStyle}>
               <img
-                src="/assets/images/black-icons/whatsapp_black.png"
+                src="/assets/images/black-icons/whatsapp.svg"
                 alt="WhatsApp"
                 style={{ height: "20px", width: "20px" }}
               />
@@ -565,7 +564,7 @@ const HomeScreen = () => {
           <button onClick={handleLocation} style={buttonStyle}>
             <div style={iconWrapperStyle}>
               <img
-                src="/assets/images/black-icons/location_black.png"
+                src="/assets/images/black-icons/Location.svg"
                 alt="Location"
                 style={{ height: "20px", width: "20px" }}
               />
@@ -577,7 +576,7 @@ const HomeScreen = () => {
           <button onClick={handleMail} style={buttonStyle}>
             <div style={iconWrapperStyle}>
               <img
-                src="/assets/images/black-icons/gmail_black.png"
+                src="/assets/images/black-icons/email.svg"
                 alt="Mail"
                 style={{ height: "20px", width: "20px" }}
               />
@@ -606,50 +605,30 @@ const HomeScreen = () => {
         </div>
 
         {/* Social Media Buttons - More minimal */}
-        <div style={{ marginTop: "20px" }}>
-          <button
-            className="social-rounded-btn"
-            onClick={handleFacebook}
-            style={{
-              padding: "8px",
-              backgroundColor: "#3A559F",
-              marginRight: "10px",
-            }}
-          >
-            <img src="/assets/images/icons/facebook.png" alt="Facebook" />
+        <div style={{ display: "flex", gap: "10px", marginTop: "10px" }}>
+          <button className="social-rounded-btn" onClick={handleFacebook}>
+            <img
+              src="/assets/images/social-media-icons/Facebook.svg"
+              alt="Facebook"
+            />
           </button>
-          <button
-            className="social-rounded-btn"
-            onClick={handleInstagram}
-            style={{
-              padding: "8px",
-              backgroundColor: "#D03B98",
-              marginRight: "10px",
-            }}
-          >
-            <img src="/assets/images/icons/instagram.png" alt="Instagram" />
+          <button className="social-rounded-btn" onClick={handleInstagram}>
+            <img
+              src="/assets/images/social-media-icons/Instagram.svg"
+              alt="Instagram"
+            />
           </button>
-          <button
-            className="social-rounded-btn"
-            onClick={handleLinkedIn}
-            style={{
-              padding: "8px",
-              backgroundColor: "#0B63BD",
-              marginRight: "10px",
-            }}
-          >
-            <img src="/assets/images/icons/linkedin.png" alt="LinkedIn" />
+          <button className="social-rounded-btn" onClick={handleLinkedIn}>
+            <img
+              src="/assets/images/social-media-icons/Linkedin.svg"
+              alt="LinkedIn"
+            />
           </button>
-          <button
-            className="social-rounded-btn"
-            onClick={handleShare}
-            style={{
-              padding: "8px",
-              backgroundColor: "#00ADFF",
-              marginRight: "10px",
-            }}
-          >
-            <img src="/assets/images/icons/share.png" alt="Share" />
+          <button className="social-rounded-btn" onClick={handleShare}>
+            <img
+              src="/assets/images/social-media-icons/Share.svg"
+              alt="Share"
+            />
           </button>
         </div>
 
@@ -668,16 +647,18 @@ const HomeScreen = () => {
               window.open("https://g.page/r/CTja04nreWhBEBM/review", "_blank")
             }
             style={{
-              padding: "12px 20px",
+              padding: "6px 20px",
               border: "1px solid #e0e0e0",
               borderRadius: "8px",
               backgroundColor: "white",
               display: "flex",
               alignItems: "center",
+              justifyContent: "center",
               fontSize: "16px",
               fontWeight: "500",
               color: "#333",
               boxShadow: "0 2px 4px rgba(0,0,0,0.05)",
+              width: "70%",
             }}
           >
             <img
@@ -758,7 +739,7 @@ const HomeScreen = () => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/phone_black.png"
+                      src="/assets/images/black-icons/Call-Us.svg"
                       alt="Call"
                       style={{ height: "20px", width: "20px" }}
                     />
@@ -788,7 +769,7 @@ const HomeScreen = () => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/location_black.png"
+                      src="/assets/images/black-icons/Location.svg"
                       alt="Call"
                       style={{ height: "20px", width: "20px" }}
                     />
@@ -829,7 +810,7 @@ const HomeScreen = () => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/whatsapp_black.png"
+                      src="/assets/images/black-icons/whatsapp.svg"
                       alt="Call"
                       style={{ height: "20px", width: "20px" }}
                     />
@@ -859,7 +840,7 @@ const HomeScreen = () => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/gmail_black.png"
+                      src="/assets/images/black-icons/email.svg"
                       alt="Call"
                       style={{ height: "20px", width: "20px" }}
                     />
@@ -870,36 +851,32 @@ const HomeScreen = () => {
 
               {/* Right Section: Rounded Social Buttons */}
               <div style={{ display: "flex", gap: "10px" }}>
-                <button
-                  className="social-rounded-btn"
-                  onClick={handleFacebook}
-                  style={{ padding: "8px", backgroundColor: "#3A559F" }}
-                >
-                  <img src="/assets/images/icons/facebook.png" alt="Facebook" />
-                </button>
-                <button
-                  className="social-rounded-btn"
-                  onClick={handleInstagram}
-                  style={{ padding: "8px", backgroundColor: "#D03B98" }}
-                >
+                <button className="social-rounded-btn" onClick={handleFacebook}>
                   <img
-                    src="/assets/images/icons/instagram.png"
-                    alt="Instagram"
+                    src="/assets/images/social-media-icons/Facebook.svg"
+                    alt="Facebook"
                   />
                 </button>
                 <button
                   className="social-rounded-btn"
-                  onClick={handleLinkedIn}
-                  style={{ padding: "8px", backgroundColor: "#0B63BD" }}
+                  onClick={handleInstagram}
                 >
-                  <img src="/assets/images/icons/linkedin.png" alt="LinkedIn" />
+                  <img
+                    src="/assets/images/social-media-icons/Instagram.svg"
+                    alt="Instagram"
+                  />
                 </button>
-                <button
-                  className="social-rounded-btn"
-                  onClick={handleShare}
-                  style={{ padding: "8px", backgroundColor: "#00ADFF" }}
-                >
-                  <img src="/assets/images/icons/share.png" alt="Share" />
+                <button className="social-rounded-btn" onClick={handleLinkedIn}>
+                  <img
+                    src="/assets/images/social-media-icons/Linkedin.svg"
+                    alt="LinkedIn"
+                  />
+                </button>
+                <button className="social-rounded-btn" onClick={handleShare}>
+                  <img
+                    src="/assets/images/social-media-icons/Share.svg"
+                    alt="Share"
+                  />
                 </button>
               </div>
             </div>
@@ -955,7 +932,7 @@ const HomeScreen = () => {
                       }}
                     >
                       <img
-                        src="/assets/images/black-icons/phone_black.png"
+                        src="/assets/images/black-icons/Call-Us.svg"
                         alt="Call"
                         style={{ height: "20px", width: "20px" }}
                       />
@@ -985,7 +962,7 @@ const HomeScreen = () => {
                       }}
                     >
                       <img
-                        src="/assets/images/black-icons/location_black.png"
+                        src="/assets/images/black-icons/Location.svg"
                         alt="Call"
                         style={{ height: "20px", width: "20px" }}
                       />
@@ -1026,7 +1003,7 @@ const HomeScreen = () => {
                       }}
                     >
                       <img
-                        src="/assets/images/black-icons/whatsapp_black.png"
+                        src="/assets/images/black-icons/whatsapp.svg"
                         alt="Call"
                         style={{ height: "20px", width: "20px" }}
                       />
@@ -1056,7 +1033,7 @@ const HomeScreen = () => {
                       }}
                     >
                       <img
-                        src="/assets/images/black-icons/gmail_black.png"
+                        src="/assets/images/black-icons/email.svg"
                         alt="Call"
                         style={{ height: "20px", width: "20px" }}
                       />
@@ -1070,39 +1047,35 @@ const HomeScreen = () => {
                   <button
                     className="social-rounded-btn"
                     onClick={handleFacebook}
-                    style={{ padding: "8px", backgroundColor: "#3A559F" }}
                   >
                     <img
-                      src="/assets/images/icons/facebook.png"
+                      src="/assets/images/social-media-icons/Facebook.svg"
                       alt="Facebook"
                     />
                   </button>
                   <button
                     className="social-rounded-btn"
                     onClick={handleInstagram}
-                    style={{ padding: "8px", backgroundColor: "#D03B98" }}
                   >
                     <img
-                      src="/assets/images/icons/instagram.png"
+                      src="/assets/images/social-media-icons/Instagram.svg"
                       alt="Instagram"
                     />
                   </button>
                   <button
                     className="social-rounded-btn"
                     onClick={handleLinkedIn}
-                    style={{ padding: "8px", backgroundColor: "#0B63BD" }}
                   >
                     <img
-                      src="/assets/images/icons/linkedin.png"
+                      src="/assets/images/social-media-icons/Linkedin.svg"
                       alt="LinkedIn"
                     />
                   </button>
-                  <button
-                    className="social-rounded-btn"
-                    onClick={handleShare}
-                    style={{ padding: "8px", backgroundColor: "#00ADFF" }}
-                  >
-                    <img src="/assets/images/icons/share.png" alt="Share" />
+                  <button className="social-rounded-btn" onClick={handleShare}>
+                    <img
+                      src="/assets/images/social-media-icons/Share.svg"
+                      alt="Share"
+                    />
                   </button>
                 </div>
                 <div
@@ -1120,7 +1093,7 @@ const HomeScreen = () => {
                       )
                     }
                     style={{
-                      padding: "12px 40px",
+                      padding: "9px 40px",
                       border: "1px solid #e0e0e0",
                       borderRadius: "8px",
                       backgroundColor: "white",
@@ -1197,7 +1170,7 @@ const HomeScreen = () => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/phone_black.png"
+                      src="/assets/images/black-icons/Call-Us.svg"
                       alt="Call"
                       style={{
                         height: "17px",
@@ -1248,7 +1221,7 @@ const HomeScreen = () => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/whatsapp_black.png"
+                      src="/assets/images/black-icons/whatsapp.svg"
                       alt="WhatsApp"
                       style={{
                         height: "15px",
@@ -1290,7 +1263,7 @@ const HomeScreen = () => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/location_black.png"
+                      src="/assets/images/black-icons/Location.svg"
                       alt="Location"
                       style={{
                         height: "18px",
@@ -1378,9 +1351,15 @@ const HomeScreen = () => {
                     <div className="col-lg-4 col-md-6 col-sm-12">
                       <div className="icon-box icon-box-one">
                         <div className="icon">
-                          <i
+                          {/* <i
                             className="ti-desktop"
                             style={{ color: "#69C8C7" }}
+                          /> */}
+                          <img
+                            src="/assets/images/home-about-us/Talent Optimization.svg"
+                            className="me-2 mx-2"
+                            alt="WhatsApp"
+                            style={{ width: "20px", height: "20px" }}
                           />
                         </div>
                         <div className="info">
@@ -1391,9 +1370,15 @@ const HomeScreen = () => {
                     <div className="col-lg-4 col-md-6 col-sm-12">
                       <div className="icon-box icon-box-one">
                         <div className="icon">
-                          <i
+                          {/* <i
                             className="ti-volume"
                             style={{ color: "#69C8C7" }}
+                          /> */}
+                          <img
+                            src="/assets/images/home-about-us/HR Automation Tools.svg"
+                            className="me-2 mx-2"
+                            alt="WhatsApp"
+                            style={{ width: "20px", height: "20px" }}
                           />
                         </div>
                         <div className="info">
@@ -1404,9 +1389,15 @@ const HomeScreen = () => {
                     <div className="col-lg-4 col-md-6 col-sm-12">
                       <div className="icon-box icon-box-one">
                         <div className="icon">
-                          <i
+                          {/* <i
                             className="ti-desktop"
                             style={{ color: "#69C8C7" }}
+                          /> */}
+                          <img
+                            src="/assets/images/home-about-us/Clear Workforce Insights.svg"
+                            className="me-2 mx-2"
+                            alt="WhatsApp"
+                            style={{ width: "20px", height: "20px" }}
                           />
                         </div>
                         <div className="info">
@@ -1417,9 +1408,15 @@ const HomeScreen = () => {
                     <div className="col-lg-4 col-md-6 col-sm-12">
                       <div className="icon-box icon-box-one">
                         <div className="icon">
-                          <i
+                          {/* <i
                             className="ti-desktop"
                             style={{ color: "#69C8C7" }}
+                          /> */}
+                          <img
+                            src="/assets/images/home-about-us/Smart HR Solutions.svg"
+                            className="me-2 mx-2"
+                            alt="WhatsApp"
+                            style={{ width: "20px", height: "20px" }}
                           />
                         </div>
                         <div className="info">
@@ -1430,9 +1427,15 @@ const HomeScreen = () => {
                     <div className="col-lg-4 col-md-6 col-sm-12">
                       <div className="icon-box icon-box-one">
                         <div className="icon">
-                          <i
+                          {/* <i
                             className="ti-volume"
                             style={{ color: "#69C8C7" }}
+                          /> */}
+                          <img
+                            src="/assets/images/home-about-us/Intregrated HR Systems.svg"
+                            className="me-2 mx-2"
+                            alt="WhatsApp"
+                            style={{ width: "20px", height: "20px" }}
                           />
                         </div>
                         <div className="info">
@@ -1443,9 +1446,15 @@ const HomeScreen = () => {
                     <div className="col-lg-4 col-md-6 col-sm-12">
                       <div className="icon-box icon-box-one">
                         <div className="icon">
-                          <i
+                          {/* <i
                             className="ti-desktop"
                             style={{ color: "#69C8C7" }}
+                          /> */}
+                          <img
+                            src="/assets/images/home-about-us/Ideal for Growing Teams.svg"
+                            className="me-2 mx-2"
+                            alt="WhatsApp"
+                            style={{ width: "20px", height: "20px" }}
                           />
                         </div>
                         <div className="info">
@@ -1485,7 +1494,7 @@ const HomeScreen = () => {
                     {...reletedListingSlider2}
                     className="releted-listing-slider-one"
                   >
-                    {products.map((product, index) => (
+                    {services.map((product, index) => (
                       <div className="listing-item listing-grid-item-two">
                         <div
                           className="listing-thumbnail"
@@ -1493,10 +1502,17 @@ const HomeScreen = () => {
                             backgroundColor: product.backgroundColor,
                             borderTopLeftRadius: "10px",
                             borderTopRightRadius: "10px",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            display: "flex",
                           }}
                         >
                           <Link href={`/product-details/${product.slug}`}>
-                            <img src={product.image} alt="TV Product Image" />
+                            <img
+                              src={product.image}
+                              alt="TV Product Image"
+                              style={{ objectFit: "cover", width: "100%" }}
+                            />
                           </Link>
                           <span
                             className="featured-btn"
@@ -1515,7 +1531,7 @@ const HomeScreen = () => {
                             style={{
                               display: "-webkit-box",
                               WebkitBoxOrient: "vertical",
-                              WebkitLineClamp:6,
+                              WebkitLineClamp: 6,
                               overflow: "hidden",
                               textOverflow: "ellipsis",
                               maxWidth: "300px",
@@ -1554,19 +1570,16 @@ const HomeScreen = () => {
                                   }}
                                   className="flex items-center gap-2 px-3 py-1 mt-1 mb-3 rounded-lg transition"
                                   style={{
-                                    backgroundColor: "#FFF",
-                                    border: "1px solid #24D07A",
-                                    borderColor: "#24D07A",
+                                    backgroundColor: "#24D07A",
                                     display: "flex",
                                     flexDirection: "row",
                                     alignItems: "center",
                                     justifyContent: "center",
-                                    // paddingBottom: "20px",
                                     width: "100%",
                                   }}
                                 >
                                   <img
-                                    src="/assets/images/whatsapp-image-green.png"
+                                    src="/assets/images/WhatsApp_Image.png"
                                     alt="WhatsApp Icon"
                                     style={{
                                       height: "15px",
@@ -1574,7 +1587,10 @@ const HomeScreen = () => {
                                       marginRight: "8px",
                                     }}
                                   />
-                                  <span className="underline" style={{color: "#24D07A"}}>
+                                  <span
+                                    className="underline"
+                                    style={{ color: "#FFFFFF" }}
+                                  >
                                     Get Services
                                   </span>
                                 </button>
@@ -1765,7 +1781,7 @@ const HomeScreen = () => {
                     <li className="review">
                       <div className="thumb">
                         <img
-                          src="/assets/images/listing/review-1.jpg"
+                          src="/assets/images/testimonial/feedback-user-4.jpg"
                           alt="review image"
                         />
                       </div>
@@ -1808,12 +1824,12 @@ const HomeScreen = () => {
                     <li className="review">
                       <div className="thumb">
                         <img
-                          src="/assets/images/listing/review-2.jpg"
+                          src="/assets/images/testimonial/feedback-user-3.jpg"
                           alt="review image"
                         />
                       </div>
                       <div className="review-content">
-                        <h5>Moriana Steve</h5>
+                        <h5>Rhea Steve</h5>
                         <span className="date">Sep 02, 2021</span>
                         <p>
                           Musutrum orci montes hac at neque mollis taciti
@@ -1851,12 +1867,12 @@ const HomeScreen = () => {
                     <li className="review">
                       <div className="thumb">
                         <img
-                          src="/assets/images/listing/review-3.jpg"
+                          src="/assets/images/testimonial/feedback-user-2.jpg"
                           alt="review image"
                         />
                       </div>
                       <div className="review-content">
-                        <h5>Moriana Steve</h5>
+                        <h5>Smith Joy</h5>
                         <span className="date">Sep 02, 2021</span>
                         <p>
                           Musutrum orci montes hac at neque mollis taciti
@@ -1893,94 +1909,23 @@ const HomeScreen = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="listing-review-form mb-30 wow fadeInUp">
-                  <div className="row">
-                    <div className="col-md-6">
-                      <h4 className="title">Write a Review</h4>
-                    </div>
-                    <div className="col-md-6">
-                      <div className="form-rating">
-                        <ul className="ratings">
-                          <li>
-                            <span>Rate Here:</span>
-                          </li>
-                          <li className="star">
-                            <i className="flaticon-star-1" />
-                          </li>
-                          <li className="star">
-                            <i className="flaticon-star-1" />
-                          </li>
-                          <li className="star">
-                            <i className="flaticon-star-1" />
-                          </li>
-                          <li className="star">
-                            <i className="flaticon-star-1" />
-                          </li>
-                          <li className="star">
-                            <i className="flaticon-star-1" />
-                          </li>
-                        </ul>
-                        <span>(02 Reviews)</span>
-                      </div>
-                    </div>
-                  </div>
-                  <form onSubmit={(e) => e.preventDefault()}>
-                    <div className="row">
-                      <div className="col-lg-12">
-                        <div className="form_group">
-                          <textarea
-                            className="form_control"
-                            placeholder="Write Message"
-                            name="message"
-                          />
-                        </div>
-                      </div>
-                      <div className="col-lg-6">
-                        <div className="form_group">
-                          <input
-                            type="text"
-                            className="form_control"
-                            placeholder="Your name"
-                            name="name"
-                            required=""
-                          />
-                        </div>
-                      </div>
-                      <div className="col-lg-6">
-                        <div className="form_group">
-                          <input
-                            type="email"
-                            className="form_control"
-                            placeholder="Email here"
-                            name="email"
-                            required=""
-                          />
-                        </div>
-                      </div>
-                      <div className="col-lg-12">
-                        <div className="form_group">
-                          <div className="single-checkbox d-flex">
-                            <input
-                              type="checkbox"
-                              id="check4"
-                              name="checkbox"
-                            />
-                            <label htmlFor="check4">
-                              <span>
-                                Save my name, email, and website in this browser
-                                for the next time i comment.
-                              </span>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-12">
-                        <div className="form_group">
-                          <button className="main-btn">Submit Review</button>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
+                <div
+                  style={{
+                    justifyContent: "center",
+                    alignItems: "center",
+                    display: "flex",
+                    marginBottom: "50px",
+                  }}
+                >
+                  <button
+                    className="main-btn"
+                    onClick={
+                      handleLocation
+                      // window.open("https://g.page/r/CTjtIU0PHHR6EBM/review", "_blank")
+                    }
+                  >
+                    Give Us a Review
+                  </button>
                 </div>
               </div>
             </div>

@@ -4,19 +4,19 @@ import Layout from "@/layouts/Layout";
 // import Link from "next/link";
 // import { Nav, Tab } from "react-bootstrap";
 // import Slider from "react-slick";
-import { products } from "../../products";
 // import { useEffect, useState } from "react";
 import ProductDetailsClient from "@/components/ProductDetailsClient";
+import { services } from "@/services";
 
 export async function generateStaticParams() {
-  return products.map((product) => ({
+  return services.map((product) => ({
     slug: product.slug,
   }));
 }
 
 export async function generateMetadata({ params }) {
   const { slug } = params;
-  const item = products.find((item) => item.slug === slug);
+  const item = services.find((item) => item.slug === slug);
 
   return {
     title: item?.name || 'Product Details',
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }) {
       title: item?.name || 'Product Details',
       description: item?.detail || 'Product details page',
       images: [item?.image || ''],
-      url: `https://plixon.in/product/${slug}`,
+      url: `https://shapingteam.com/product/${slug}`,
       type: 'website',
     },
   };
@@ -33,7 +33,7 @@ export async function generateMetadata({ params }) {
 
 const ProductDetails = ({ params }) => {
   const { slug } = params;
-  const item = products.find((item) => item.slug === slug);
+  const item = services.find((item) => item.slug === slug);
 
   return (
     <Layout>

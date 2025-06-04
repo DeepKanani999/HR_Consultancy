@@ -103,8 +103,8 @@ const Footer = () => {
           <UserInfoPopup isOpen={isPopupOpen} onClose={handleClosePopup} />
         </div>
       )}
-      <div className="footer-wrapper-one dark-black pt-90">
-        <div className="footer-widget pb-60">
+      <div className="footer-wrapper-one dark-black pt-40 pb-80">
+        <div className="footer-widget">
           <div className="container">
             <div className="row">
               <div className="col-lg-4 col-md-6 col-sm-12">
@@ -294,13 +294,10 @@ const Footer = () => {
                 <div className="copyright-link">
                   <ul>
                     <li>
-                      <a href="#">Terms & Conditins</a>
+                      <a href="/Terms-Condition">Terms & Conditins</a>
                     </li>
                     <li>
-                      <a href="#">Services</a>
-                    </li>
-                    <li>
-                      <a href="#">Career</a>
+                      <a href="/Privacy-Policy">Privacy Policy</a>
                     </li>
                   </ul>
                 </div>

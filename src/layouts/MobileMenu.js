@@ -49,7 +49,7 @@ const MobileMenu = () => {
                 <div className="site-branding">
                   <Link className="brand-logo" href="/">
                     <img
-                      src="/assets/images/logo/logo-2.png"
+                      src="/assets/images/logo/Shapping-Team-Logo.png"
                       alt="Brand Logo"
                       style={{ maxWidth: "100%" }}
                     />

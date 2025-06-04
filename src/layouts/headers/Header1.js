@@ -85,7 +85,7 @@ const Header1 = () => {
               <div className="col-lg-2 col-5">
                 <div className="site-branding">
                   <Link className="brand-logo" href="/">
-                    <img src="assets/images/logo/logo-2.png" alt="Brand Logo" />
+                    <img src="assets/images/logo/Shapping-Team-Logo.png" alt="Brand Logo" />
                   </Link>
                 </div>
               </div>

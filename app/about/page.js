@@ -142,6 +142,57 @@ const About = () => {
     }
   };
 
+  const featuresArray = [
+    {
+      title: "Strategy",
+      img: "/assets/images/about-us/Strategy.svg",
+      description:
+        "Strategy Implement forward-thinking strategies that align organizational goals with innovative solutions for long-term success and competitive advantage.",
+    },
+    {
+      title: "Employee Search",
+      img: "/assets/images/about-us/Employee Search.svg",
+      description:
+        "Employee Search Strategically identify top talent through comprehensive methods to enhance organizational performance and drive sustainable growth.",
+    },
+    {
+      title: "People Cohesion",
+      img: "/assets/images/about-us/People Cohesion.svg",
+      description:
+        "Foster collaborative environments that strengthen team unity and drive collective success through shared goals and values.",
+    },
+    {
+      title: "Team Leadership",
+      img: "/assets/images/about-us/Team Leadership.svg",
+      description:
+        "Team Leadership Cultivate strong leadership capabilities that inspire teams, encourage innovation, and drive organizational excellence.",
+    },
+    {
+      title: "Team Buid Up",
+      img: "/assets/images/about-us/Team Build Up.svg",
+      description:
+        "Develop cohesive teams by enhancing collaboration, trust, and communication to achieve shared objectives and sustained success.",
+    },
+  ];
+
+  const challengesArr = [
+    {
+      img: "/assets/images/about-us/challanges/First.svg",
+      description:
+        "Industry Challenges vs Solutions Illustrating key HR challenges and strategic solutions with industry data like implementing software, defining rules & regulations and design as per industry types.",
+    },
+    {
+      img: "/assets/images/about-us/challanges/Second.svg",
+      description:
+        "Performance & Cost Metrics improvement in employee performance, HR cost savings with optimized processes like defining specific roles through skill matrix and identifying gap to bridge through training.",
+    },
+    {
+      img: "/assets/images/about-us/challanges/Third.svg",
+      description:
+        "Data-Driven Decision Making Leveraging analytics by formulation policies and their effectiveness to reduce grievances for better efficiency, innovation, and measurable business outcomes.",
+    },
+  ];
+
   return (
     <Layout>
       {mounted && isPopupOpen && !sessionStorage.getItem("userInfo") && (
@@ -230,7 +281,7 @@ const About = () => {
                       }}
                     >
                       <img
-                        src="/assets/images/black-icons/phone_black.png"
+                        src="/assets/images/black-icons/Call-Us.svg"
                         alt="Call"
                         style={{ height: "20px", width: "20px" }}
                       />
@@ -260,7 +311,7 @@ const About = () => {
                       }}
                     >
                       <img
-                        src="/assets/images/black-icons/location_black.png"
+                        src="/assets/images/black-icons/Location.svg"
                         alt="Call"
                         style={{ height: "20px", width: "20px" }}
                       />
@@ -301,7 +352,7 @@ const About = () => {
                       }}
                     >
                       <img
-                        src="/assets/images/black-icons/whatsapp_black.png"
+                        src="/assets/images/black-icons/whatsapp.svg"
                         alt="Call"
                         style={{ height: "20px", width: "20px" }}
                       />
@@ -331,7 +382,7 @@ const About = () => {
                       }}
                     >
                       <img
-                        src="/assets/images/black-icons/gmail_black.png"
+                        src="/assets/images/black-icons/email.svg"
                         alt="Call"
                         style={{ height: "20px", width: "20px" }}
                       />
@@ -345,39 +396,35 @@ const About = () => {
                   <button
                     className="social-rounded-btn"
                     onClick={handleFacebook}
-                    style={{ padding: "8px", backgroundColor: "#3A559F" }}
                   >
                     <img
-                      src="/assets/images/icons/facebook.png"
+                      src="/assets/images/social-media-icons/Facebook.svg"
                       alt="Facebook"
                     />
                   </button>
                   <button
                     className="social-rounded-btn"
                     onClick={handleInstagram}
-                    style={{ padding: "8px", backgroundColor: "#D03B98" }}
                   >
                     <img
-                      src="/assets/images/icons/instagram.png"
+                      src="/assets/images/social-media-icons/Instagram.svg"
                       alt="Instagram"
                     />
                   </button>
                   <button
                     className="social-rounded-btn"
                     onClick={handleLinkedIn}
-                    style={{ padding: "8px", backgroundColor: "#0B63BD" }}
                   >
                     <img
-                      src="/assets/images/icons/linkedin.png"
+                      src="/assets/images/social-media-icons/Linkedin.svg"
                       alt="LinkedIn"
                     />
                   </button>
-                  <button
-                    className="social-rounded-btn"
-                    onClick={handleShare}
-                    style={{ padding: "8px", backgroundColor: "#00ADFF" }}
-                  >
-                    <img src="/assets/images/icons/share.png" alt="Share" />
+                  <button className="social-rounded-btn" onClick={handleShare}>
+                    <img
+                      src="/assets/images/social-media-icons/Share.svg"
+                      alt="Share"
+                    />
                   </button>
                 </div>
               </div>
@@ -390,99 +437,45 @@ const About = () => {
               <div className="col-lg-6">
                 <div className="section-title text-center mb-60 wow fadeInUp">
                   <span className="sub-title">Some Feature</span>
-                  <h2>Caring for Your Entertainment</h2>
+                  <h2>What do we stand for?</h2>
                 </div>
               </div>
             </div>
-            <div className="row">
-              <div className="col-lg-3 col-md-6 col-sm-12">
+            <div
+              className="row"
+              style={{
+                display: "flex",
+                flexWrap: "nowrap",
+                justifyContent: "space-evenly",
+              }}
+            >
+              {featuresArray?.map((val, index) => (
                 <div
-                  className="features-item features-item-two text-center mb-40 wow fadeInUp"
-                  data-wow-delay="10ms"
+                  key={index}
+                  className="col"
+                  style={{ flex: 1, minWidth: 0, maxWidth: "20%" }} // Force equal width for 5 items
                 >
-                  <div className="icon">
-                    <i className="flaticon-add-user" />
-                  </div>
-                  <div className="content">
-                    <h3 className="title">User-Friendly Experience</h3>
-                    <p>
-                      At our HR Consultancy, we make managing human resources
-                      simple and stress-free — with easy-to-understand
-                      solutions, clear processes, and personalized support at
-                      every step.
-                    </p>
-                    {/* <Link className="btn-link icon-btn" href="/how-work">
-                      More Details
-                    </Link> */}
+                  <div
+                    className={`features-item features-item-two text-center mb-40 wow ${
+                      index % 2 === 0 ? "fadeInUp" : "fadeInDown"
+                    }`}
+                    data-wow-delay={`${(index + 1) * 10}ms`}
+                  >
+                    <div className="icon">
+                      <img
+                        src={`${val?.img}`}
+                        className="me-2 mx-2"
+                        alt="icons"
+                        style={{ width: "50px", height: "50px" }}
+                      />
+                    </div>
+                    <div className="content">
+                      <h3 className="title">{val?.title}</h3>
+                      <p>{val?.description}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="col-lg-3 col-md-6 col-sm-12">
-                <div
-                  className="features-item features-item-two text-center mb-40 wow fadeInDown"
-                  data-wow-delay="20ms"
-                >
-                  <div className="icon">
-                    <i className="flaticon-gift-box" />
-                  </div>
-                  <div className="content">
-                    <h3 className="title">Exciting Daily Insights</h3>
-                    <p>
-                      Get access to the latest HR trends, recruitment tips, and
-                      compliance updates. We provide valuable daily insights to
-                      help your business stay ahead and make smarter HR
-                      decisions.
-                    </p>
-                    {/* <Link className="btn-link icon-btn" href="/how-work">
-                      More Details
-                    </Link> */}
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-3 col-md-6 col-sm-12">
-                <div
-                  className="features-item features-item-two text-center mb-40 wow fadeInUp"
-                  data-wow-delay="30ms"
-                >
-                  <div className="icon">
-                    <i className="flaticon-laptop" />
-                  </div>
-                  <div className="content">
-                    <h3 className="title">Smart & Quick Hiring</h3>
-                    <p>
-                      No more wasting time on unqualified applicants. Our
-                      intelligent talent-matching system and efficient screening
-                      tools help you find the right candidates quickly — based
-                      on your exact hiring needs.
-                    </p>
-                    {/* <Link className="btn-link icon-btn" href="/how-work">
-                      More Details
-                    </Link> */}
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-3 col-md-6 col-sm-12">
-                <div
-                  className="features-item features-item-two text-center mb-40 wow fadeInDown"
-                  data-wow-delay="40ms"
-                >
-                  <div className="icon">
-                    <i className="flaticon-headphone" />
-                  </div>
-                  <div className="content">
-                    <h3 className="title">24/7 Expert Support</h3>
-                    <p>
-                      Have questions? Our HR professionals are available around
-                      the clock — whether you need help with policies, hiring
-                      strategies, or compliance concerns. We're always just a
-                      call or message away.
-                    </p>
-                    {/* <Link className="btn-link icon-btn" href="/how-work">
-                      More Details
-                    </Link> */}
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -496,31 +489,96 @@ const About = () => {
               <div className="col-lg-6">
                 <div className="features-img wow fadeInLeft">
                   <img
-                    src="/assets/images/details-images/product-detail-4.jpg"
+                    src="/assets/images/details-images/about-us-speciality.jpg"
                     alt="Features Image"
+                    style={{ width: "100%" }}
                   />
+                </div>
+                <div
+                  style={{
+                    marginTop: "50px",
+                    width: "90%",
+                  }}
+                >
+                  <h4
+                    style={{
+                      paddingRight: "10px",
+                      paddingLeft: "10px",
+                      color: "#676767",
+                    }}
+                  >
+                    Started my career with Jakson Ltd. and set up entire Eastern
+                    region handling near about 300 + employees.
+                  </h4>
+                  <div style={{ marginTop: "30px" }}>
+                    <div className="p-3 border rounded mb-4">
+                      <li>
+                        Extensive expertise in HR strategy, talent optimization,
+                        and regulatory compliance across IT and non-IT
+                        industries.
+                      </li>
+                    </div>
+                    <div className="p-3 border rounded mb-4">
+                      <li>
+                        Proven track record in HR operations, performance
+                        management, and employee engagement to drive workforce
+                        efficiency.
+                      </li>
+                    </div>
+                    <div className="p-3 border rounded mb-4">
+                      <li>
+                        Data-driven approach to aligning HR initiatives and
+                        mastery in various HR software implementation and usage.
+                      </li>
+                    </div>
+                    <div className="p-3 border rounded mb-4">
+                      <li>
+                        Leader in transformation, driving cultural development,
+                        analytics-based decision-making, and workforce
+                        compliance.
+                      </li>
+                    </div>
+                    <div className="p-3 border rounded">
+                      <li>
+                        Certified Digital Trailblazer, integrating modern HR
+                        technology to optimize talent strategies through social
+                        media and various other platforms.
+                      </li>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="col-lg-6">
                 <div className="features-content-box features-content-box-one">
                   <div className="section-title section-title-left mb-30 wow fadeInUp">
                     <span className="sub-title">Our Speciality</span>
-                    <h2>Experience HR that Delivers Impact</h2>
+                    <h2>Core Expertise</h2>
                   </div>
-                  <h5>Where people performance meets future-ready thinking.</h5>
+                  <h5>
+                    Our founder brings a wealth of experience and visionary
+                    leadership to the HR Shaping Team. Their core expertise
+                    includes:
+                  </h5>
                   <ul className="features-list-one">
                     <li
                       className="list-item wow fadeInUp"
                       data-wow-delay="10ms"
                     >
                       <div className="icon">
-                        <i className="flaticon-find" />
+                        {/* <i className="flaticon-find" /> */}
+                        <img
+                          src="/assets/images/about-us/core-Expertise/Talent Acquisitions.svg"
+                          className="me-2 mx-2"
+                          alt="WhatsApp"
+                          style={{ width: "40px", height: "40px" }}
+                        />
                       </div>
                       <div className="content">
-                        <h5>Perfect Match, Effortlessly</h5>
+                        <h5>Talent Acquisitions</h5>
                         <p>
-                          Empowering individuals and teams to thrive, grow, and
-                          lead.
+                          Talent Acquisition is the strategic process of
+                          identifying, attracting, and hiring top talent to
+                          drive organizational growth and success.
                         </p>
                       </div>
                     </li>
@@ -529,13 +587,20 @@ const About = () => {
                       data-wow-delay="20ms"
                     >
                       <div className="icon">
-                        <i className="flaticon-place" />
+                        {/* <i className="flaticon-place" /> */}
+                        <img
+                          src="/assets/images/about-us/core-Expertise/Payroll.svg"
+                          className="me-2 mx-2"
+                          alt="WhatsApp"
+                          style={{ width: "40px", height: "40px" }}
+                        />
                       </div>
                       <div className="content">
-                        <h5>Smart & Simple Selection</h5>
+                        <h5>Payroll</h5>
                         <p>
-                          Transforming talent into a competitive advantage
-                          through strategic HR solutions.
+                          Payroll is the systemized process of managing employee
+                          compensation, ensuring accurate salary disbursement,
+                          tax compliance, and financial transparency.
                         </p>
                       </div>
                     </li>
@@ -544,12 +609,112 @@ const About = () => {
                       data-wow-delay="30ms"
                     >
                       <div className="icon">
-                        <i className="flaticon-social-care" />
+                        {/* <i className="flaticon-social-care" /> */}
+                        <img
+                          src="/assets/images/about-us/core-Expertise/Statutory Compliance.svg"
+                          className="me-2 mx-2"
+                          alt="WhatsApp"
+                          style={{ width: "40px", height: "40px" }}
+                        />
                       </div>
                       <div className="content">
-                        <h5>24/7 Expert Support</h5>
+                        <h5>Statutory Compliance</h5>
                         <p>
-                          Expert HR guidance available whenever you need it.
+                          Statutory Compliance ensures adherence to labor laws
+                          and regulations, minimizing legal risks and promoting
+                          ethical, compliant HR and business practices.
+                        </p>
+                      </div>
+                    </li>
+                    <li
+                      className="list-item wow fadeInUp"
+                      data-wow-delay="30ms"
+                    >
+                      <div className="icon">
+                        {/* <i className="flaticon-social-care" /> */}
+                        <img
+                          src="/assets/images/about-us/core-Expertise/Contract Labour Management.svg"
+                          className="me-2 mx-2"
+                          alt="WhatsApp"
+                          style={{ width: "40px", height: "40px" }}
+                        />
+                      </div>
+                      <div className="content">
+                        <h5>Contract Labour Management</h5>
+                        <p>
+                          Contract Labour Management oversees temporary
+                          workforce engagement, ensuring legal compliance, fair
+                          practices, efficiency, and alignment with
+                          organizational goals and policies.
+                        </p>
+                      </div>
+                    </li>
+                    <li
+                      className="list-item wow fadeInUp"
+                      data-wow-delay="30ms"
+                    >
+                      <div className="icon">
+                        {/* <i className="flaticon-social-care" /> */}
+                        <img
+                          src="/assets/images/about-us/core-Expertise/Factory Compliance.svg"
+                          className="me-2 mx-2"
+                          alt="WhatsApp"
+                          style={{ width: "40px", height: "40px" }}
+                        />
+                      </div>
+                      <div className="content">
+                        <h5>Factory Compliance</h5>
+                        <p>
+                          Factory Compliance ensures adherence to labor laws,
+                          safety standards, and operational regulations,
+                          promoting ethical practices and a legally sound
+                          workplace environment.
+                        </p>
+                      </div>
+                    </li>
+                    <li
+                      className="list-item wow fadeInUp"
+                      data-wow-delay="30ms"
+                    >
+                      <div className="icon">
+                        {/* <i className="flaticon-social-care" /> */}
+                        <img
+                          src="/assets/images/about-us/core-Expertise/PMS and Appraisals.svg"
+                          className="me-2 mx-2"
+                          alt="WhatsApp"
+                          style={{ width: "40px", height: "40px" }}
+                        />
+                      </div>
+                      <div className="content">
+                        <h5>PMS and Appraisals</h5>
+                        <p>
+                          PMS and Appraisals drive performance through
+                          structured evaluations, goal alignment, feedback, and
+                          rewards, fostering growth, accountability, and
+                          employee development.
+                        </p>
+                      </div>
+                    </li>
+                    <li
+                      className="list-item wow fadeInUp"
+                      data-wow-delay="30ms"
+                    >
+                      <div className="icon">
+                        {/* <i className="flaticon-social-care" /> */}
+                        <img
+                          src="/assets/images/about-us/core-Expertise/Training.svg"
+                          className="me-2 mx-2"
+                          alt="WhatsApp"
+                          style={{ width: "40px", height: "40px" }}
+                        />
+                      </div>
+                      <div className="content">
+                        <h5>Training</h5>
+                        <p>
+                          Training enhances employee skills, knowledge, and
+                          performance, aligning workforce capabilities with
+                          organizational goals for continuous growth and
+                          competitive advantage.
                         </p>
                       </div>
                     </li>
@@ -557,92 +722,165 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className="row mt-5">
-              <div className="col-lg-6">
-                <div className="content">
-                  <h5>Our Vision</h5>
-                  <p>
-                    To be the most trusted and innovative HR consultancy,
-                    empowering organizations and individuals to thrive through
-                    people-first solutions, strategic insight, and
-                    transformative partnerships.
-                  </p>
+          </div>
+        </div>
+      </section>
+      <div className="features-wrapper-three pt-100">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-6">
+              <div className="section-title text-center mb-60 wow fadeInUp">
+                <span className="sub-title">Some</span>
+                <h2>Challenges</h2>
+              </div>
+            </div>
+          </div>
+          <div
+            className="row"
+            style={{
+              display: "flex",
+              flexWrap: "nowrap",
+              justifyContent: "space-evenly",
+            }}
+          >
+            {challengesArr?.map((val, index) => (
+              <div
+                key={index}
+                className="col"
+                style={{ flex: 1, minWidth: 0, maxWidth: "30%" }} // Force equal width for 5 items
+              >
+                <div
+                  className={`features-item features-item-two text-center mb-40 wow ${
+                    index % 2 === 0 ? "fadeInUp" : "fadeInDown"
+                  }`}
+                  data-wow-delay={`${(index + 1) * 10}ms`}
+                >
+                  <div className="icon">
+                    <img
+                      src={`${val?.img}`}
+                      className="me-2 mx-2"
+                      alt="icons"
+                      style={{ width: "50px", height: "50px" }}
+                    />
+                  </div>
+                  <div className="content">
+                    {/* <h3 className="title">{val?.title}</h3> */}
+                    <p>{val?.description}</p>
+                  </div>
                 </div>
               </div>
-              <div className="col-lg-6">
-                <div className="content">
-                  <h5>Our Mission</h5>
-                  <p>
-                    To deliver exceptional HR services that align talent with
-                    opportunity, foster workplace excellence, and drive
-                    sustainable growth for our clients. We are committed to
-                    supporting businesses and job seekers through ethical,
-                    responsive, and results-driven human resource solutions.
-                  </p>
-                </div>
+            ))}
+          </div>
+          <div className="row mt-5 mb-5">
+            <div className="col-lg-6 mb-5">
+              <div className="content">
+                <h5>Our Vision</h5>
+                <p>
+                  To be the most trusted and innovative HR consultancy,
+                  empowering organizations and individuals to thrive through
+                  people-first solutions, strategic insight, and transformative
+                  partnerships.
+                </p>
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="content">
+                <h5>Our Mission</h5>
+                <p>
+                  To deliver exceptional HR services that align talent with
+                  opportunity, foster workplace excellence, and drive
+                  sustainable growth for our clients. We are committed to
+                  supporting businesses and job seekers through ethical,
+                  responsive, and results-driven human resource solutions.
+                </p>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
       {/*====== End Features Section ======*/}
       {/*====== Start CTA Section ======*/}
       <section className="cta-area">
         <div
           className="cta-wrapper-two bg_cover b"
-          style={{ backgroundImage: "url(assets/images/bg/cta-bg-2.jpg)" }}
+          style={{
+            backgroundImage: "url(/assets/images/bg/cta-bg-2.jpg)",
+            height: "40vh",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
         >
-          <div className="container">
-            <div className="row align-items-center">
-              <div className="col-lg-7">
-                <div
-                  className="company-name wow fadeInLeft"
-                  style={{ fontSize: "150px" }}
-                >
-                  Shaping Team
-                </div>
+          {/* <div className="container"> */}
+          <div
+            className="row align-items-center align-items-center"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            {/* <div className="col-lg-7">
+              <div
+                className="company-name wow fadeInLeft"
+                style={{ fontSize: "150px" }}
+              >
+                Shaping Team
               </div>
-              <div className="col-lg-5">
-                <div className="cta-content-box wow fadeInRight">
-                  <h2>Experience Next-Level Human Potential</h2>
-                  <p>
-                    Human-centered HR expertise combining deep industry insight
-                    and customized solutions that turn your workforce into your
-                    greatest competitive advantage.
-                  </p>
-                  <a
-                    onClick={() => {
-                      const link = document.createElement("a");
-                      link.href = "/assets/images/HR_Consultancy.pptx";
-                      link.target = "_blank"; // Open in a new tab
-                      link.rel = "noopener noreferrer"; // Security best practice
-                      document.body.appendChild(link);
-                      link.click();
-                      document.body.removeChild(link);
-                    }}
-                    className="main-btn"
-                    style={{
-                      display: "inline-block",
-                      padding: "10px 20px",
-                      backgroundColor: "#69C8C7",
-                      color: "#FFF",
-                      textDecoration: "none",
-                      borderRadius: "5px",
-                      marginTop: "10px",
-                    }}
-                  >
-                    View Services
-                  </a>
-                </div>
+            </div> */}
+            <div className="col-lg-5">
+              <div
+                className="cta-content-box wow fadeInRight"
+                style={{
+                  alignItems: "center",
+                  justifyContent: "center",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <h2 style={{ textAlign: "center" }}>
+                  Experience Next-Level Human Potential
+                </h2>
+                <p style={{ textAlign: "center" }}>
+                  Human-centered HR expertise combining deep industry insight
+                  and customized solutions that turn your workforce into your
+                  greatest competitive advantage.
+                </p>
+                <a
+                  onClick={() => {
+                    const link = document.createElement("a");
+                    link.href = "/assets/images/HR_Consultancy.pptx";
+                    link.target = "_blank"; // Open in a new tab
+                    link.rel = "noopener noreferrer"; // Security best practice
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                  }}
+                  className="main-btn"
+                  style={{
+                    display: "inline-block",
+                    padding: "10px 20px",
+                    backgroundColor: "#69C8C7",
+                    color: "#FFF",
+                    textDecoration: "none",
+                    borderRadius: "5px",
+                    marginTop: "10px",
+                    alignSelf: "center",
+                    cursor: "pointer",
+                  }}
+                >
+                  View Services
+                </a>
               </div>
             </div>
           </div>
+          {/* </div> */}
         </div>
       </section>
       {/*====== End CTA Section ======*/}
       {/*====== Start Testimonial Section ======*/}
-      <section
-        className="testimonial-area bg_cover pt-110 pb-265"
+      {/* <section
+        className="testimonial-area bg_cover pt-110 pb-80"
         style={{
           backgroundImage: "url(assets/images/bg/testimonial-bg-2.jpg)",
         }}
@@ -666,15 +904,61 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/*====== End Testimonial Section ======*/}
+      {/*====== Start Success Story Section ======*/}
+      <section
+        className="pt-50 pb-200"
+        style={{
+          backgroundImage: "url(assets/images/bg/testimonial-bg-2.jpg)",
+        }}
+      >
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-6">
+              <div className="section-title text-center mb-60 wow fadeInUp">
+                <span className="sub-title">Esteemed Clients</span>
+                <h2>Success Stories</h2>
+              </div>
+            </div>
+          </div>
+          <div className="row justify-content-center">
+            <div className="col-lg-6">
+              <div
+                className="text-center fadeInUp"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  flexDirection: "column",
+                  padding: "30px 40px",
+                  boxShadow: "2 5px 15px rgba(8,0,0,0.15)",
+                  backgroundColor:"#FFFFFF",
+                  borderRadius:"10px"
+                }}
+              >
+                <img
+                  src="/assets/images/about-us/Rajeswari_Img.jpg"
+                  alt="Features Image"
+                  style={{
+                    width: "25%",
+                    marginBottom: "20px",
+                  }}
+                />
+                Design and Implementation Entire HR Operation from Scratch
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/*====== End Success Story Section ======*/}
       {/*====== Start Newsletter Section ======*/}
       <section className="newsletter-area">
         <div className="container" style={{ marginBottom: "50px" }}>
           <div
             className="newsletter-wrapper newsletter-wrapper-one bg_cover"
             style={{
-              backgroundImage: "url(assets/images/bg/newsletter-bg-1.jpg)",
+              backgroundColor: "#B5E3E3",
             }}
           >
             <div className="row">
@@ -745,130 +1029,6 @@ const About = () => {
         </div>
       </section>
       {/*====== End Newsletter Section ======*/}
-      {/*====== Start Team Section ======*/}
-      {/* <section className="team-area pt-115 pb-85">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-6">
-              <div className="section-title text-center mb-50 wow fadeInUp">
-                <span className="sub-title">Team Member</span>
-                <h2>Meet Our Executive</h2>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-lg-4 col-md-6 col-sm-12">
-              <div className="team-item team-item-one mb-30 wow fadeInUp">
-                <div className="team-img">
-                  <img src="assets/images/team/team-1.jpg" alt="Team Image" />
-                  <div className="team-social">
-                    <ul className="social-link">
-                      <li>
-                        <a href="#">
-                          <i className="ti-facebook" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="ti-twitter-alt" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="ti-linkedin" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="ti-pinterest" />
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="team-info text-center">
-                  <h3 className="title">Alesha Mature</h3>
-                  <span className="position">Sr. Executive</span>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 col-sm-12">
-              <div
-                className="team-item team-item-one mb-30 wow fadeInDown"
-                data-wow-delay="20ms"
-              >
-                <div className="team-img">
-                  <img src="assets/images/team/team-2.jpg" alt="Team Image" />
-                  <div className="team-social">
-                    <ul className="social-link">
-                      <li>
-                        <a href="#">
-                          <i className="ti-facebook" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="ti-twitter-alt" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="ti-linkedin" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="ti-pinterest" />
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="team-info text-center">
-                  <h3 className="title">Martyn Decode</h3>
-                  <span className="position">Sr. Executive</span>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 col-sm-12">
-              <div className="team-item team-item-one mb-30 wow fadeInUp">
-                <div className="team-img">
-                  <img src="assets/images/team/team-3.jpg" alt="Team Image" />
-                  <div className="team-social">
-                    <ul className="social-link">
-                      <li>
-                        <a href="#">
-                          <i className="ti-facebook" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="ti-twitter-alt" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="ti-linkedin" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i className="ti-pinterest" />
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="team-info text-center">
-                  <h3 className="title">Alesha Mature</h3>
-                  <span className="position">Sr. Executive</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-      {/*====== End Team Section ======*/}
     </Layout>
   );
 };
