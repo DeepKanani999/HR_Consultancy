@@ -263,7 +263,7 @@ const Contact = () => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/phone_black.png"
+                      src="/assets/images/black-icons/Call-Us.svg"
                       alt="Call"
                       style={{ height: "20px", width: "20px" }}
                     />
@@ -293,7 +293,7 @@ const Contact = () => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/location_black.png"
+                      src="/assets/images/black-icons/Location.svg"
                       alt="Call"
                       style={{ height: "20px", width: "20px" }}
                     />
@@ -334,7 +334,7 @@ const Contact = () => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/whatsapp_black.png"
+                      src="/assets/images/black-icons/whatsapp.svg"
                       alt="Call"
                       style={{ height: "20px", width: "20px" }}
                     />
@@ -364,7 +364,7 @@ const Contact = () => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/gmail_black.png"
+                      src="/assets/images/black-icons/email.svg"
                       alt="Call"
                       style={{ height: "20px", width: "20px" }}
                     />
@@ -375,36 +375,32 @@ const Contact = () => {
 
               {/* Right Section: Rounded Social Buttons */}
               <div style={{ display: "flex", gap: "10px" }}>
-                <button
-                  className="social-rounded-btn"
-                  onClick={handleFacebook}
-                  style={{ padding: "8px", backgroundColor: "#3A559F" }}
-                >
-                  <img src="/assets/images/icons/facebook.png" alt="Facebook" />
-                </button>
-                <button
-                  className="social-rounded-btn"
-                  onClick={handleInstagram}
-                  style={{ padding: "8px", backgroundColor: "#D03B98" }}
-                >
+                <button className="social-rounded-btn" onClick={handleFacebook}>
                   <img
-                    src="/assets/images/icons/instagram.png"
-                    alt="Instagram"
+                    src="/assets/images/social-media-icons/Facebook.svg"
+                    alt="Facebook"
                   />
                 </button>
                 <button
                   className="social-rounded-btn"
-                  onClick={handleLinkedIn}
-                  style={{ padding: "8px", backgroundColor: "#0B63BD" }}
+                  onClick={handleInstagram}
                 >
-                  <img src="/assets/images/icons/linkedin.png" alt="LinkedIn" />
+                  <img
+                    src="/assets/images/social-media-icons/Instagram.svg"
+                    alt="Instagram"
+                  />
                 </button>
-                <button
-                  className="social-rounded-btn"
-                  onClick={handleShare}
-                  style={{ padding: "8px", backgroundColor: "#00ADFF" }}
-                >
-                  <img src="/assets/images/icons/share.png" alt="Share" />
+                <button className="social-rounded-btn" onClick={handleLinkedIn}>
+                  <img
+                    src="/assets/images/social-media-icons/Linkedin.svg"
+                    alt="LinkedIn"
+                  />
+                </button>
+                <button className="social-rounded-btn" onClick={handleShare}>
+                  <img
+                    src="/assets/images/social-media-icons/Share.svg"
+                    alt="Share"
+                  />
                 </button>
               </div>
             </div>

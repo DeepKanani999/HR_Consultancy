@@ -14,7 +14,7 @@ const Header2 = () => {
                 <div className="site-branding">
                   <Link className="brand-logo" href="/">
                     <img
-                      src="/assets/images/logo/logo-2.png"
+                      src="/assets/images/logo/Shapping-Team-Logo.png"
                       alt="Brand Logo"
                     />
                   </Link>
@@ -34,7 +34,7 @@ const Header2 = () => {
                         <Link href="/about">About</Link>
                       </li>
                       <li className="menu-item">
-                        <Link href="/products">Services</Link>
+                        <Link href="/services">HR Services</Link>
                       </li>
                       <li className="menu-item">
                         <Link href="/contact">Contact</Link>

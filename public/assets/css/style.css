@@ -1458,23 +1458,23 @@ button {
   content: "";
   height: 100%;
 }
-.hero-wrapper-one:after {
+/* .hero-wrapper-one:after {
   width: 43.5%;
   right: 0;
   background: url(../images/hero/hero-one-bg-2.jpg) no-repeat center center;
   background-size: cover;
-}
+} */
 @media (max-width: 991px) {
   .hero-wrapper-one:after {
     display: none;
   }
 }
-.hero-wrapper-one:before {
+/* .hero-wrapper-one:before {
   width: 56.5%;
   left: 0;
   background: url(../images/hero/hero-one-bg-1.jpg) no-repeat center center;
   background-size: cover;
-}
+} */
 @media (max-width: 991px) {
   .hero-wrapper-one:before {
     width: 100%;
