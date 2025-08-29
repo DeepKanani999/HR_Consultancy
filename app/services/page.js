@@ -552,19 +552,19 @@ const Services = () => {
                           display: "flex",
                         }}
                       >
-                        <Link href={`/product-details/${val.slug}`}>
+                        <Link href={`/product-details/${val.slug}`} style={{width:"100%"}}>
                           <img
                             src={val.image} // <-- Update TV image here
                             alt="services image"
                             style={{ objectFit: "cover", width: "100%" }}
                           />
                         </Link>
-                        <span
+                        {/* <span
                           className="featured-btn"
                           style={{ borderRadius: "5px" }}
                         >
                           Featured
-                        </span>
+                        </span> */}
                       </div>
                       <div className="listing-content">
                         <h4 className="title" style={{ textAlign: "center" }}>
