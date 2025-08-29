@@ -593,9 +593,9 @@ const ProductDetailsClient = ({ item }) => {
                                 ab illo inventore veritatis et quasi architecto
                                 beatae vitae dicta sunt explicabo.
                               </p>
-                              <a href="#" className="reply">
+                              {/* <a href="#" className="reply">
                                 Reply
-                              </a>
+                              </a> */}
                             </div>
                           </li>
                           <li className="review">
@@ -632,9 +632,9 @@ const ProductDetailsClient = ({ item }) => {
                                 ab illo inventore veritatis et quasi architecto
                                 beatae vitae dicta sunt explicabo.
                               </p>
-                              <a href="#" className="reply">
+                              {/* <a href="#" className="reply">
                                 Reply
-                              </a>
+                              </a> */}
                             </div>
                           </li>
                         </ul>
@@ -749,7 +749,7 @@ const ProductDetailsClient = ({ item }) => {
                       display: "flex",
                     }}
                   >
-                    <Link href={`/product-details/${item.slug}`}>
+                    <Link href={`/product-details/${item.slug}`} style={{width:"100%"}}>
                       <img
                         src={item.image} // <-- Update TV image here
                         alt="TV Product Image"

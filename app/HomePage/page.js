@@ -14,9 +14,9 @@ import BottomTab from "@/components/BottomBar";
 import UserInfoPopup from "@/components/userDetailPopup";
 
 const heroImages = [
-  "/assets/images/Hero-Banner/TV-setup-1.jpg",
-  "/assets/images/Hero-Banner/TV-setup-2.jpg",
-  "/assets/images/Hero-Banner/TV-setup-3.jpg",
+  "/assets/images/Hero-Banner/HR-1.jpg",
+  "/assets/images/Hero-Banner/HR-2.jpg",
+  "/assets/images/Hero-Banner/HR-3.jpg",
 ];
 
 const populerSearches = [
@@ -43,7 +43,7 @@ const carouselSettings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 3500, // 3.5 seconds
+  autoplaySpeed: 1500, // 3.5 seconds
   fade: false,
   responsive: [
     {
@@ -492,7 +492,8 @@ const HomeScreen = () => {
               <img
                 src={img}
                 alt={`Hero Banner ${idx + 1}`}
-                className="hero-banner-img"
+                className="w-100 h-[82vh] object-cover"
+                // className="hero-banner-img"
               />
             </div>
           ))}
@@ -1495,7 +1496,7 @@ const HomeScreen = () => {
                     className="releted-listing-slider-one"
                   >
                     {services.map((product, index) => (
-                      <div className="listing-item listing-grid-item-two">
+                      <div className="listing-item listing-grid-item-two w-100">
                         <div
                           className="listing-thumbnail"
                           style={{
@@ -1505,21 +1506,25 @@ const HomeScreen = () => {
                             justifyContent: "center",
                             alignItems: "center",
                             display: "flex",
+                            width: "100%",
                           }}
                         >
-                          <Link href={`/product-details/${product.slug}`}>
+                          <Link
+                            href={`/product-details/${product.slug}`}
+                            style={{ width: "100%" }}
+                          >
                             <img
                               src={product.image}
                               alt="TV Product Image"
-                              style={{ objectFit: "cover", width: "100%" }}
+                              style={{ objectFit: "", width: "100%" }}
                             />
                           </Link>
-                          <span
+                          {/* <span
                             className="featured-btn"
                             style={{ borderRadius: "5px" }}
                           >
                             Featured
-                          </span>
+                          </span> */}
                         </div>
                         <div className="listing-content">
                           <h3 className="title">
@@ -1814,10 +1819,10 @@ const HomeScreen = () => {
                               <i className="flaticon-star-1" />
                             </li>
                           </ul>
-                          <a href="#" className="reply">
+                          {/* <a href="#" className="reply">
                             <i className="ti-share-alt" />
                             Reply
-                          </a>
+                          </a> */}
                         </div>
                       </div>
                     </li>
@@ -1857,10 +1862,10 @@ const HomeScreen = () => {
                               <i className="flaticon-star-1" />
                             </li>
                           </ul>
-                          <a href="#" className="reply">
+                          {/* <a href="#" className="reply">
                             <i className="ti-share-alt" />
                             Reply
-                          </a>
+                          </a> */}
                         </div>
                       </div>
                     </li>
@@ -1900,10 +1905,10 @@ const HomeScreen = () => {
                               <i className="flaticon-star-1" />
                             </li>
                           </ul>
-                          <a href="#" className="reply">
+                          {/* <a href="#" className="reply">
                             <i className="ti-share-alt" />
                             Reply
-                          </a>
+                          </a> */}
                         </div>
                       </div>
                     </li>

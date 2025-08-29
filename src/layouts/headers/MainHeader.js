@@ -16,6 +16,9 @@ const Header2 = () => {
                     <img
                       src="/assets/images/logo/Shapping-Team-Logo.png"
                       alt="Brand Logo"
+                      className="h-5 w-auto" 
+                      height={50}
+                      width={50}
                     />
                   </Link>
                 </div>
