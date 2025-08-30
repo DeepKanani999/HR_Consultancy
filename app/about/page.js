@@ -144,52 +144,55 @@ const About = () => {
 
   const featuresArray = [
     {
-      title: "Strategy",
+      title: "Talent Acquisition",
       img: "/assets/images/about-us/Strategy.svg",
       description:
-        "Strategy Implement forward-thinking strategies that align organizational goals with innovative solutions for long-term success and competitive advantage.",
+        "We connect organizations with the right talent, ensuring each role is filled with individuals who bring value, skill, and passion.",
     },
     {
-      title: "Employee Search",
+      title: "Organizing & Team Building",
       img: "/assets/images/about-us/Employee Search.svg",
       description:
-        "Employee Search Strategically identify top talent through comprehensive methods to enhance organizational performance and drive sustainable growth.",
+        "We help structure teams and build strong foundations that encourage collaboration, trust, and long-term growth.",
     },
     {
-      title: "People Cohesion",
+      title: "People Cohesion & Training",
       img: "/assets/images/about-us/People Cohesion.svg",
       description:
-        "Foster collaborative environments that strengthen team unity and drive collective success through shared goals and values.",
+        "Through tailored training programs, we enhance skills and create harmony within teams to achieve shared goals.",
     },
     {
-      title: "Team Leadership",
+      title: "Strategic Leadership",
       img: "/assets/images/about-us/Team Leadership.svg",
       description:
-        "Team Leadership Cultivate strong leadership capabilities that inspire teams, encourage innovation, and drive organizational excellence.",
+        "We provide guidance to leaders, enabling them to shape vision, drive innovation, and lead with confidence.",
     },
     {
-      title: "Team Buid Up",
+      title: "Implementation",
       img: "/assets/images/about-us/Team Build Up.svg",
       description:
-        "Develop cohesive teams by enhancing collaboration, trust, and communication to achieve shared objectives and sustained success.",
+        "We turn strategies into action, ensuring plans are executed effectively and deliver measurable results.",
     },
   ];
 
   const challengesArr = [
     {
       img: "/assets/images/about-us/challanges/First.svg",
+      title:"Our Vision",
       description:
-        "Industry Challenges vs Solutions Illustrating key HR challenges and strategic solutions with industry data like implementing software, defining rules & regulations and design as per industry types.",
+        "To be a trusted partner in shaping organizations by building strong teams, ensuring compliance, and fostering a culture of growth, innovation, and integrity.",
     },
     {
       img: "/assets/images/about-us/challanges/Second.svg",
+      title:"Our Mission",
       description:
-        "Performance & Cost Metrics improvement in employee performance, HR cost savings with optimized processes like defining specific roles through skill matrix and identifying gap to bridge through training.",
+        "To provide end-to-end HR, compliance, and workforce management solutions that simplify processes, empower people, and drive sustainable business success.",
     },
     {
       img: "/assets/images/about-us/challanges/Third.svg",
+      title:"Our Values",
       description:
-        "Data-Driven Decision Making Leveraging analytics by formulation policies and their effectiveness to reduce grievances for better efficiency, innovation, and measurable business outcomes.",
+        "We are guided by integrity, excellence, collaboration, innovation, and a people-first approach, ensuring every solution we deliver creates lasting impact for our clients and their teams.",
     },
   ];
 
@@ -434,10 +437,10 @@ const About = () => {
         <div className="features-wrapper-three pt-110">
           <div className="container">
             <div className="row justify-content-center">
-              <div className="col-lg-6">
+              <div className="col-lg-7">
                 <div className="section-title text-center mb-60 wow fadeInUp">
                   <span className="sub-title">Some Feature</span>
-                  <h2>What do we stand for?</h2>
+                  <h2>The Way We Build Success</h2>
                 </div>
               </div>
             </div>
@@ -507,8 +510,10 @@ const About = () => {
                       color: "#676767",
                     }}
                   >
-                    Started my career with Jakson Ltd. and set up entire Eastern
-                    region handling near about 300 + employees.
+                    With over a decade of experience since beginning their HR
+                    journey in 2012, our founder has led regional HR operations
+                    for teams of 500+ employees, driving impact across IT and
+                    non-IT sectors.
                   </h4>
                   <div style={{ marginTop: "30px" }}>
                     <div className="p-3 border rounded mb-4">
@@ -574,11 +579,12 @@ const About = () => {
                         />
                       </div>
                       <div className="content">
-                        <h5>Talent Acquisitions</h5>
+                        <h5>Talent Acquisition</h5>
                         <p>
-                          Talent Acquisition is the strategic process of
-                          identifying, attracting, and hiring top talent to
-                          drive organizational growth and success.
+                          We help organizations attract and hire the right
+                          talent through a structured recruitment process that
+                          aligns with business needs, culture, and long-term
+                          goals.
                         </p>
                       </div>
                     </li>
@@ -596,11 +602,11 @@ const About = () => {
                         />
                       </div>
                       <div className="content">
-                        <h5>Payroll</h5>
+                        <h5>Payroll Management</h5>
                         <p>
-                          Payroll is the systemized process of managing employee
-                          compensation, ensuring accurate salary disbursement,
-                          tax compliance, and financial transparency.
+                          Comprehensive payroll solutions ensuring timely salary
+                          disbursement, tax compliance, and transparent
+                          financial management for employees and employers.
                         </p>
                       </div>
                     </li>
@@ -620,9 +626,9 @@ const About = () => {
                       <div className="content">
                         <h5>Statutory Compliance</h5>
                         <p>
-                          Statutory Compliance ensures adherence to labor laws
-                          and regulations, minimizing legal risks and promoting
-                          ethical, compliant HR and business practices.
+                          Expert management of labor laws and statutory
+                          requirements to reduce legal risks, ensure compliance,
+                          and promote ethical business practices.
                         </p>
                       </div>
                     </li>
@@ -640,12 +646,11 @@ const About = () => {
                         />
                       </div>
                       <div className="content">
-                        <h5>Contract Labour Management</h5>
+                        <h5>Factory Compliance</h5>
                         <p>
-                          Contract Labour Management oversees temporary
-                          workforce engagement, ensuring legal compliance, fair
-                          practices, efficiency, and alignment with
-                          organizational goals and policies.
+                          Support for compliance with factory laws, labor
+                          regulations, and safety standards, building a secure,
+                          lawful, and productive workplace environment.
                         </p>
                       </div>
                     </li>
@@ -663,12 +668,12 @@ const About = () => {
                         />
                       </div>
                       <div className="content">
-                        <h5>Factory Compliance</h5>
+                        <h5>Training & Development</h5>
                         <p>
-                          Factory Compliance ensures adherence to labor laws,
-                          safety standards, and operational regulations,
-                          promoting ethical practices and a legally sound
-                          workplace environment.
+                          Tailored training programs designed to enhance
+                          employee skills, productivity, and leadership
+                          capabilities, driving both individual and
+                          organizational growth.
                         </p>
                       </div>
                     </li>
@@ -686,12 +691,12 @@ const About = () => {
                         />
                       </div>
                       <div className="content">
-                        <h5>PMS and Appraisals</h5>
+                        <h5>Performance Management System (PMS)</h5>
                         <p>
-                          PMS and Appraisals drive performance through
-                          structured evaluations, goal alignment, feedback, and
-                          rewards, fostering growth, accountability, and
-                          employee development.
+                          Structured evaluation and appraisal systems that align
+                          employee goals with organizational objectives,
+                          improving performance, accountability, and career
+                          growth.
                         </p>
                       </div>
                     </li>
@@ -709,12 +714,55 @@ const About = () => {
                         />
                       </div>
                       <div className="content">
-                        <h5>Training</h5>
+                        <h5>Contract Management</h5>
                         <p>
-                          Training enhances employee skills, knowledge, and
-                          performance, aligning workforce capabilities with
-                          organizational goals for continuous growth and
-                          competitive advantage.
+                          End-to-end management of contract labor, including
+                          legal compliance, documentation, and fair engagement
+                          practices to optimize workforce efficiency.
+                        </p>
+                      </div>
+                    </li>
+                    <li
+                      className="list-item wow fadeInUp"
+                      data-wow-delay="30ms"
+                    >
+                      <div className="icon">
+                        {/* <i className="flaticon-social-care" /> */}
+                        <img
+                          src="/assets/images/about-us/core-Expertise/Training.svg"
+                          className="me-2 mx-2"
+                          alt="WhatsApp"
+                          style={{ width: "40px", height: "40px" }}
+                        />
+                      </div>
+                      <div className="content">
+                        <h5>ISO Implementation & Auditing</h5>
+                        <p>
+                          Comprehensive guidance and auditing for ISO standards,
+                          ensuring organizations meet global quality benchmarks
+                          and achieve certification with confidence.
+                        </p>
+                      </div>
+                    </li>
+                    <li
+                      className="list-item wow fadeInUp"
+                      data-wow-delay="30ms"
+                    >
+                      <div className="icon">
+                        {/* <i className="flaticon-social-care" /> */}
+                        <img
+                          src="/assets/images/about-us/core-Expertise/Training.svg"
+                          className="me-2 mx-2"
+                          alt="WhatsApp"
+                          style={{ width: "40px", height: "40px" }}
+                        />
+                      </div>
+                      <div className="content">
+                        <h5>POSH Training</h5>
+                        <p>
+                          Awareness and compliance training on the Prevention of
+                          Sexual Harassment (POSH) Act, creating a safe,
+                          respectful, and inclusive workplace for all employees.
                         </p>
                       </div>
                     </li>
@@ -725,13 +773,13 @@ const About = () => {
           </div>
         </div>
       </section>
-      <div className="features-wrapper-three pt-100">
+      <div className="features-wrapper-three pt-100 pb-100">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-6">
               <div className="section-title text-center mb-60 wow fadeInUp">
                 <span className="sub-title">Some</span>
-                <h2>Challenges</h2>
+                <h2>Our Foundation</h2>
               </div>
             </div>
           </div>
@@ -763,6 +811,7 @@ const About = () => {
                       style={{ width: "50px", height: "50px" }}
                     />
                   </div>
+                  <h5>{val?.title}</h5>
                   <div className="content">
                     {/* <h3 className="title">{val?.title}</h3> */}
                     <p>{val?.description}</p>
@@ -771,7 +820,7 @@ const About = () => {
               </div>
             ))}
           </div>
-          <div className="row mt-5 mb-5">
+          {/* <div className="row mt-5 mb-5">
             <div className="col-lg-6 mb-5">
               <div className="content">
                 <h5>Our Vision</h5>
@@ -795,7 +844,7 @@ const About = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       {/*====== End Features Section ======*/}
@@ -933,8 +982,8 @@ const About = () => {
                   flexDirection: "column",
                   padding: "30px 40px",
                   boxShadow: "2 5px 15px rgba(8,0,0,0.15)",
-                  backgroundColor:"#FFFFFF",
-                  borderRadius:"10px"
+                  backgroundColor: "#FFFFFF",
+                  borderRadius: "10px",
                 }}
               >
                 <img

@@ -534,7 +534,7 @@ const Contact = () => {
                             disabled={isSubmitting}
                             style={{ opacity: isSubmitting ? 0.7 : 1 }}
                           >
-                            {isSubmitting ? "Sending..." : "Send Message"}
+                            {isSubmitting ? "Sending..." : "Submit Inquiry"}
                           </button>
                         </div>
                       </div>

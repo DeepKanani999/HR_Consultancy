@@ -71,7 +71,10 @@ const MobileMenu = () => {
                       </li>
                       <About />
                       <li className="menu-item">
-                        <a href="/products">Products</a>
+                        <a href="/services">Services</a>
+                      </li>
+                      <li className="menu-item">
+                        <a href="/career">Career</a>
                       </li>
                       <Contact />
                       <li className="nav-btn">

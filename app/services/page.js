@@ -73,7 +73,7 @@ const Services = () => {
 
   return (
     <Layout>
-      <PageBanner title={"HR Services"} />
+      <PageBanner title={"Services"} />
       <section className="products-area pt-120 pb-120">
         <div
           className={`floating-social-bar ${showBar ? "visible" : ""}`}

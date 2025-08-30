@@ -19,6 +19,15 @@ const heroImages = [
   "/assets/images/Hero-Banner/HR-3.jpg",
 ];
 
+// Success images shown below the hero banner
+const successImages = [
+  "/assets/images/success_images/alpha_e.png",
+  "/assets/images/success_images/hexa_coder.svg",
+  "/assets/images/success_images/rajeshwari.png",
+  "/assets/images/success_images/sidhhi.webp",
+  "/assets/images/success_images/true_north.jpg",
+];
+
 const populerSearches = [
   "HR services 2025",
   "Hire top talent",
@@ -43,7 +52,7 @@ const carouselSettings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 1500, // 3.5 seconds
+  autoplaySpeed: 5000, // slower auto slide (5s per slide)
   fade: false,
   responsive: [
     {
@@ -147,6 +156,35 @@ const faqs = [
       "Yes, we provide HR support for remote, hybrid, and in-office teams, helping you manage workforce operations seamlessly regardless of your work model.",
   },
 ];
+
+const customerFeedback = [
+  {
+    name: "Smith Joy",
+    date: "Feb 10, 2025",
+    feedback:
+      "Outstanding consultancy service! They guided me through the entire hiring process with professionalism and clarity. I secured the right candidates faster than expected.",
+    rating: 5,
+    img: "/assets/images/testimonial/feedback-user-1.jpg",
+  },
+  {
+    name: "Rahul Verma",
+    date: "Mar 18, 2025",
+    feedback:
+      "Very reliable HR support. From recruitment to payroll management, their team made everything seamless and hassle-free for our organization.",
+    rating: 4,
+    img: "/assets/images/testimonial/feedback-user-2.jpg",
+  },
+  {
+    name: "Ananya Iyer",
+    date: "Apr 5, 2025",
+    feedback:
+      "Highly impressed with their strategic HR solutions. They helped us improve employee retention and streamline performance evaluations effectively.",
+    rating: 5,
+    img: "/assets/images/testimonial/feedback-user-4.jpg",
+  },
+];
+
+// /assets/images/testimonial/feedback-user-4.jpg
 
 export function FAQSection() {
   const [openIndex, setOpenIndex] = useState(0); // First FAQ open by default
@@ -460,8 +498,6 @@ const HomeScreen = () => {
 
   return (
     <Layout>
-      {video && <VideoPopup close={setVideo} />}
-
       {mounted && isPopupOpen && !sessionStorage.getItem("userInfo") && (
         <div
           style={{
@@ -492,7 +528,8 @@ const HomeScreen = () => {
               <img
                 src={img}
                 alt={`Hero Banner ${idx + 1}`}
-                className="w-100 h-[82vh] object-cover"
+                // className="w-100 h-[68vh] object-cover"
+                className="w-100 h-[92vh] object-cover mt-[20px]"
                 // className="hero-banner-img"
               />
             </div>
@@ -500,6 +537,46 @@ const HomeScreen = () => {
         </Slider>
       </div>
       {/*====== End Hero Banner Carousel ======*/}
+
+      {/*====== Success Images Row (below hero) ======*/}
+      <div className="container" style={{ paddingTop: 50 }}>
+        <div className="row justify-content-center pt-4">
+          <div className="col-lg-7">
+            <div className="section-title text-center mb-60 wow fadeInUp">
+              <span className="sub-title">Our Clients</span>
+              <h3>Trusted by the market leaders</h3>
+            </div>
+          </div>
+        </div>
+        <div
+          className="row justify-content-center align-items-center"
+          style={{ gap: 70, flexWrap: "wrap" }}
+        >
+          {successImages.map((src, idx) => (
+            <div
+              key={idx}
+              className="d-flex justify-content-center align-items-center"
+              style={{
+                flex: "0 1 auto",
+                maxWidth: 180,
+                minWidth: 120,
+              }}
+            >
+              <img
+                src={src}
+                alt={`Success Logo ${idx + 1}`}
+                style={{
+                  width: "100%",
+                  height: 60,
+                  objectFit: "contain",
+                  filter: "grayscale(0)",
+                  opacity: 0.95,
+                }}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/*====== Contact Info Buttons Starts here ======*/}
       <div
@@ -898,7 +975,7 @@ const HomeScreen = () => {
             {/* Buttons Section */}
             <div className="row">
               {/* Desktop View */}
-              <div
+              {/* <div
                 className="d-none d-md-flex row"
                 style={{
                   marginBottom: "20px",
@@ -1119,7 +1196,7 @@ const HomeScreen = () => {
                     Rate Us
                   </button>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Mobile Bottom Tab - Hidden on Desktop */}
@@ -1494,9 +1571,10 @@ const HomeScreen = () => {
                   <Slider
                     {...reletedListingSlider2}
                     className="releted-listing-slider-one"
+                    style={{padding:"10px"}}
                   >
                     {services.map((product, index) => (
-                      <div className="listing-item listing-grid-item-two w-100">
+                      <div className="listing-item listing-grid-item-two w-100" >
                         <div
                           className="listing-thumbnail"
                           style={{
@@ -1526,6 +1604,7 @@ const HomeScreen = () => {
                             Featured
                           </span> */}
                         </div>
+                        {/* style={{padding:"10px", backgroundColor:"red"}} */}
                         <div className="listing-content">
                           <h3 className="title">
                             <Link href={`/product-details/${product.slug}`}>
@@ -1546,12 +1625,6 @@ const HomeScreen = () => {
                           >
                             {product.detail}
                           </p>
-                          {/* <div className="features-list">
-                            <ul>
-                              <li>AI Upscaling</li>
-                              <li>8K Ultra HD</li>
-                            </ul>
-                          </div> */}
                           <span className="phone-meta"></span>
                           <div
                             className="listing-meta"
@@ -1712,7 +1785,7 @@ const HomeScreen = () => {
                     <input
                       type="text"
                       className="form-control border-start-0 rounded"
-                      placeholder="Hi, I found your business..."
+                      placeholder="Hi, I want your service..."
                       aria-label="WhatsApp Message"
                       style={{ marginRight: "5px" }}
                       onChange={(e) => {
@@ -1747,7 +1820,7 @@ const HomeScreen = () => {
                       className="ms-md-3 text-nowrap"
                       style={{ marginTop: "5px" }}
                     >
-                      Or connect with seller instantly
+                      Or connect with us instantly
                       <a
                         href="tel:79843 48404"
                         className="text-decoration-none ms-1"
@@ -1783,135 +1856,58 @@ const HomeScreen = () => {
                 <div className="listing-review-box mb-50 wow fadeInUp">
                   <h4 className="title">Customer Review</h4>
                   <ul className="review-list">
-                    <li className="review">
-                      <div className="thumb">
-                        <img
-                          src="/assets/images/testimonial/feedback-user-4.jpg"
-                          alt="review image"
-                        />
-                      </div>
-                      <div className="review-content">
-                        <h5>Moriana Steve</h5>
-                        <span className="date">Sep 02, 2021</span>
-                        <p>
-                          Musutrum orci montes hac at neque mollis taciti
-                          parturient vehicula interdum verra cubilia ipsum duis
-                          amet nullam sit ut ornare mattis urna.{" "}
-                        </p>
-                        <div className="content-meta d-flex align-items-center justify-content-between">
-                          <ul className="ratings ratings-three">
-                            <li>
-                              <span className="av-rate">4.5</span>
-                            </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
-                          </ul>
-                          {/* <a href="#" className="reply">
-                            <i className="ti-share-alt" />
-                            Reply
-                          </a> */}
+                    {customerFeedback.map((review, index) => (
+                      <li className="review" key={index}>
+                        <div className="thumb">
+                          <img
+                            src={review.img}
+                            alt={review.name}
+                            style={{
+                              width: "100%",
+                              height: "100%",
+                              objectFit: "cover",
+                              borderRadius: "10px",
+                            }}
+                          />
                         </div>
-                      </div>
-                    </li>
-                    <li className="review">
-                      <div className="thumb">
-                        <img
-                          src="/assets/images/testimonial/feedback-user-3.jpg"
-                          alt="review image"
-                        />
-                      </div>
-                      <div className="review-content">
-                        <h5>Rhea Steve</h5>
-                        <span className="date">Sep 02, 2021</span>
-                        <p>
-                          Musutrum orci montes hac at neque mollis taciti
-                          parturient vehicula interdum verra cubilia ipsum duis
-                          amet nullam sit ut ornare mattis urna.{" "}
-                        </p>
-                        <div className="content-meta d-flex align-items-center justify-content-between">
-                          <ul className="ratings ratings-three">
-                            <li>
-                              <span className="av-rate">4.5</span>
-                            </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
-                          </ul>
-                          {/* <a href="#" className="reply">
-                            <i className="ti-share-alt" />
-                            Reply
-                          </a> */}
+
+                        <div className="review-content">
+                          <h5>{review.name}</h5>
+                          <span className="date">{review.date}</span>
+                          <p>{review.feedback}</p>
+
+                          <div className="content-meta d-flex align-items-center justify-content-between">
+                            <ul className="ratings ratings-six d-flex">
+                              <li>
+                                <span className="av-rate">{review.rating}</span>
+                              </li>
+
+                              {/* Filled stars */}
+                              {[...Array(review.rating)].map((_, i) => (
+                                <li className="px-1" key={`filled-${i}`}>
+                                  <img
+                                    src="/assets/images/contact-info/rating-star-fill.svg"
+                                    alt="star-fill"
+                                    style={{ height: "20px", width: "20px" }}
+                                  />
+                                </li>
+                              ))}
+
+                              {/* Empty stars (5 - rating) */}
+                              {[...Array(5 - review.rating)].map((_, i) => (
+                                <li className="px-1" key={`empty-${i}`}>
+                                  <img
+                                    src="/assets/images/contact-info/rating-star.svg"
+                                    alt="star"
+                                    style={{ height: "20px", width: "20px" }}
+                                  />
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
                         </div>
-                      </div>
-                    </li>
-                    <li className="review">
-                      <div className="thumb">
-                        <img
-                          src="/assets/images/testimonial/feedback-user-2.jpg"
-                          alt="review image"
-                        />
-                      </div>
-                      <div className="review-content">
-                        <h5>Smith Joy</h5>
-                        <span className="date">Sep 02, 2021</span>
-                        <p>
-                          Musutrum orci montes hac at neque mollis taciti
-                          parturient vehicula interdum verra cubilia ipsum duis
-                          amet nullam sit ut ornare mattis urna.{" "}
-                        </p>
-                        <div className="content-meta d-flex align-items-center justify-content-between">
-                          <ul className="ratings ratings-three">
-                            <li>
-                              <span className="av-rate">4.5</span>
-                            </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
-                          </ul>
-                          {/* <a href="#" className="reply">
-                            <i className="ti-share-alt" />
-                            Reply
-                          </a> */}
-                        </div>
-                      </div>
-                    </li>
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 <div
