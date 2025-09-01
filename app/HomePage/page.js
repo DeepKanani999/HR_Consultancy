@@ -462,7 +462,7 @@ const HomeScreen = () => {
     display: "flex",
     alignItems: "center",
     justifyContent: "flex-start",
-    background: "#160E41",
+    background: "#2062AF",
     border: "2px solid #FFF",
     borderRadius: "10px",
     padding: "0 12px",
@@ -764,13 +764,16 @@ const HomeScreen = () => {
             left: "50%",
             transform: `translate(-50%, ${showBar ? "0%" : "100%"})`,
             width: "80%",
-            backgroundColor: "#fff",
+            background: "rgba(255, 255, 255, 0.18)",
+            backdropFilter: "blur(12px)",
+            WebkitBackdropFilter: "blur(12px)",
+            border: "1px solid rgba(255, 255, 255, 0.3)",
             zIndex: 9999,
             justifyContent: "",
             alignItems: "center",
             transition: "transform 0.3s ease-in-out",
             borderRadius: "10px 10px 10px 10px",
-            boxShadow: "0 -2px 10px rgba(0, 0, 0, 0.2)",
+            boxShadow: "0 8px 24px rgba(0, 0, 0, 0.08)",
           }}
         >
           <div
@@ -1227,7 +1230,7 @@ const HomeScreen = () => {
                     flexDirection: "row",
                     alignItems: "center",
                     justifyContent: "center",
-                    background: "#160E41",
+                    background: "#2062AF",
                     border: "2px solid #FFF",
                     borderRadius: "10px",
                     padding: "4px",
@@ -1278,7 +1281,7 @@ const HomeScreen = () => {
                     flexDirection: "row",
                     alignItems: "center",
                     justifyContent: "center",
-                    background: "#160E41",
+                    background: "#2062AF",
                     border: "2px solid #000",
                     borderRadius: "10px",
                     padding: "4px",
@@ -1320,7 +1323,7 @@ const HomeScreen = () => {
                     flexDirection: "row",
                     alignItems: "center",
                     justifyContent: "center",
-                    background: "#160E41",
+                    background: "#2062AF",
                     border: "2px solid #000",
                     borderRadius: "10px",
                     padding: "4px",
@@ -1362,7 +1365,7 @@ const HomeScreen = () => {
                     flexDirection: "row",
                     alignItems: "center",
                     justifyContent: "center",
-                    background: "#160E41",
+                    background: "#2062AF",
                     border: "2px solid #000",
                     borderRadius: "10px",
                     padding: "4px",
@@ -1571,10 +1574,10 @@ const HomeScreen = () => {
                   <Slider
                     {...reletedListingSlider2}
                     className="releted-listing-slider-one"
-                    style={{padding:"10px"}}
+                    style={{ padding: "10px" }}
                   >
                     {services.map((product, index) => (
-                      <div className="listing-item listing-grid-item-two w-100" >
+                      <div className="listing-item listing-grid-item-two w-100">
                         <div
                           className="listing-thumbnail"
                           style={{
@@ -1604,28 +1607,38 @@ const HomeScreen = () => {
                             Featured
                           </span> */}
                         </div>
-                        {/* style={{padding:"10px", backgroundColor:"red"}} */}
-                        <div className="listing-content">
-                          <h3 className="title">
-                            <Link href={`/product-details/${product.slug}`}>
-                              {product.service}
-                            </Link>
-                          </h3>
-                          <p
-                            style={{
-                              display: "-webkit-box",
-                              WebkitBoxOrient: "vertical",
-                              WebkitLineClamp: 6,
-                              overflow: "hidden",
-                              textOverflow: "ellipsis",
-                              maxWidth: "300px",
-                              lineHeight: "1.5",
-                              marginBottom: "15px",
-                            }}
+                        <div
+                          className="listing-content"
+                          style={{
+                            padding: "10px",
+                            flexDirection: "column",
+                          }}
+                        >
+                          <div
+                            style={{ maxHeight: "150px", overflow: "hidden" }}
                           >
-                            {product.detail}
-                          </p>
-                          <span className="phone-meta"></span>
+                            <h3 className="title text-center">
+                              <Link href={`/product-details/${product.slug}`}>
+                                {product.service}
+                              </Link>
+                            </h3>
+                            <p
+                              style={{
+                                display: "-webkit-box",
+                                WebkitBoxOrient: "vertical",
+                                WebkitLineClamp: 4,
+                                overflow: "hidden",
+                                textOverflow: "ellipsis",
+                                maxWidth: "100%",
+                                lineHeight: "1.45",
+                                marginBottom: "15px",
+                                textAlign: "center",
+                              }}
+                            >
+                              {product.detail}
+                            </p>
+                            <span className="phone-meta"></span>
+                          </div>
                           <div
                             className="listing-meta"
                             style={{ width: "100%" }}

@@ -1,5 +1,6 @@
 // app/layout.js
 import "./globals.css";
+import ToastRoot from "../src/components/ToastRoot";
 
 export const metadata = {
   title: "Shaping Team - Expert HR Consultancy Services",
@@ -39,7 +40,10 @@ export default function RootLayout({ children }) {
         <meta name="twitter:description" content={metadata.description} />
         <meta name="twitter:image" content="/assets/images/twitter-image.jpg" />
       </head>
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        {children}
+        <ToastRoot />
+      </body>
     </html>
   );
 }

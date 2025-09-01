@@ -238,12 +238,16 @@ export default function Career() {
           left: "50%",
           transform: `translate(-50%, ${showBar ? "0%" : "100%"})`,
           width: "80%",
-          backgroundColor: "#fff",
+          background: "rgba(255, 255, 255, 0.18)",
+          backdropFilter: "blur(12px)",
+          WebkitBackdropFilter: "blur(12px)",
+          border: "1px solid rgba(255, 255, 255, 0.3)",
           zIndex: 9999,
+          justifyContent: "",
           alignItems: "center",
           transition: "transform 0.3s ease-in-out",
-          borderRadius: "10px",
-          boxShadow: "0 -2px 10px rgba(0, 0, 0, 0.2)",
+          borderRadius: "10px 10px 10px 10px",
+          boxShadow: "0 8px 24px rgba(0, 0, 0, 0.08)",
         }}
       >
         <div
@@ -266,7 +270,16 @@ export default function Career() {
           >
             {/* Left Section */}
             <div style={{ display: "flex", gap: "12px" }}>
-              <button className="social-main-btn" onClick={handleCall} style={{ width: "150px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+              <button
+                className="social-main-btn"
+                onClick={handleCall}
+                style={{
+                  width: "150px",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
                 <div
                   style={{
                     height: "32px",
@@ -287,7 +300,16 @@ export default function Career() {
                 </div>
                 Call Us
               </button>
-              <button className="social-main-btn" onClick={handleLocation} style={{ width: "150px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+              <button
+                className="social-main-btn"
+                onClick={handleLocation}
+                style={{
+                  width: "150px",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
                 <div
                   style={{
                     height: "32px",
@@ -318,7 +340,12 @@ export default function Career() {
                     !userInfo ? setIsPopupOpen(true) : handleWhatsApp();
                   }
                 }}
-                style={{ width: "160px", display: "flex", justifyContent: "center", alignItems: "center" }}
+                style={{
+                  width: "160px",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
               >
                 <div
                   style={{
@@ -340,7 +367,16 @@ export default function Career() {
                 </div>
                 WhatsApp
               </button>
-              <button className="social-main-btn" onClick={handleMail} style={{ width: "150px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+              <button
+                className="social-main-btn"
+                onClick={handleMail}
+                style={{
+                  width: "150px",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
                 <div
                   style={{
                     height: "32px",
@@ -366,16 +402,28 @@ export default function Career() {
             {/* Right Section */}
             <div style={{ display: "flex", gap: "10px" }}>
               <button className="social-rounded-btn" onClick={handleFacebook}>
-                <img src="/assets/images/social-media-icons/Facebook.svg" alt="Facebook" />
+                <img
+                  src="/assets/images/social-media-icons/Facebook.svg"
+                  alt="Facebook"
+                />
               </button>
               <button className="social-rounded-btn" onClick={handleInstagram}>
-                <img src="/assets/images/social-media-icons/Instagram.svg" alt="Instagram" />
+                <img
+                  src="/assets/images/social-media-icons/Instagram.svg"
+                  alt="Instagram"
+                />
               </button>
               <button className="social-rounded-btn" onClick={handleLinkedIn}>
-                <img src="/assets/images/social-media-icons/Linkedin.svg" alt="LinkedIn" />
+                <img
+                  src="/assets/images/social-media-icons/Linkedin.svg"
+                  alt="LinkedIn"
+                />
               </button>
               <button className="social-rounded-btn" onClick={handleShare}>
-                <img src="/assets/images/social-media-icons/Share.svg" alt="Share" />
+                <img
+                  src="/assets/images/social-media-icons/Share.svg"
+                  alt="Share"
+                />
               </button>
             </div>
           </div>
@@ -391,8 +439,9 @@ export default function Career() {
                 <span className="sub-title">Join Our Team</span>
                 <h2>Build Your Career with Us</h2>
                 <p className="mt-3">
-                  We’re always looking for passionate people who love solving real business challenges
-                  in HR, compliance, payroll, and people development. Explore our openings below and apply.
+                  We’re always looking for passionate people who love solving
+                  real business challenges in HR, compliance, payroll, and
+                  people development. Explore our openings below and apply.
                 </p>
               </div>
             </div>
@@ -400,14 +449,14 @@ export default function Career() {
 
           {/* Separator Image */}
           <div className="col-lg-12">
-              <div className="text-center mb-40">
-                <img
-                  src="/assets/images/career/career_page_image.jpg"
-                  alt="Join Our Team"
-                  style={{ maxWidth: "85%", height: "auto", borderRadius: 8 }}
-                />
-              </div>
+            <div className="text-center mb-40">
+              <img
+                src="/assets/images/career/career_page_image.jpg"
+                alt="Join Our Team"
+                style={{ maxWidth: "85%", height: "auto", borderRadius: 8 }}
+              />
             </div>
+          </div>
 
           {/* Application Form */}
           <div className="row mt-60">
@@ -510,7 +559,8 @@ export default function Career() {
                             name="resume"
                           />
                           <small className="text-muted">
-                            Please attach your resume in the email client after it opens.
+                            Please attach your resume in the email client after
+                            it opens.
                           </small>
                         </div>
                       </div>
@@ -539,7 +589,8 @@ export default function Career() {
                     </div>
                   </form>
                   <p className="mt-2 text-muted" style={{ fontSize: 13 }}>
-                    By submitting, you agree to our Terms and acknowledge our Privacy Policy.
+                    By submitting, you agree to our Terms and acknowledge our
+                    Privacy Policy.
                   </p>
                 </div>
               </div>
@@ -562,7 +613,9 @@ export default function Career() {
                   <div className="info">
                     <h5>Careers Email</h5>
                     <p>
-                      <a href="mailto:info@shapingteam.com">info@shapingteam.com</a>
+                      <a href="mailto:info@shapingteam.com">
+                        info@shapingteam.com
+                      </a>
                     </p>
                   </div>
                 </div>
@@ -582,8 +635,19 @@ export default function Career() {
                     <i className="ti-share" />
                   </div>
                   <div className="info">
-                    <h5>Quick Apply</h5>
-                    <button className="social-main-btn mt-2" onClick={handleWhatsApp}>
+                    <button
+                      style={{
+                        border: "solid 1px #69C8C7",
+                        color: "#69C8C7",
+                        backgroundColor: "transparent",
+                        padding: "10px 20px",
+                        borderRadius: "5px",
+                        cursor: "pointer",
+                        fontWeight: "bold",
+                        transition: "all 0.3s ease",
+                      }}
+                      onClick={handleWhatsApp}
+                    >
                       Apply via WhatsApp
                     </button>
                   </div>

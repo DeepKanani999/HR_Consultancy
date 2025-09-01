@@ -1,4 +1,6 @@
-import { useState } from "react";
+"use client";
+import { useState, useEffect } from "react";
+import { toast } from "react-toastify";
 
 export default function UserInfoPopup({ isOpen, onClose }) {
   const [formData, setFormData] = useState({
@@ -6,6 +8,7 @@ export default function UserInfoPopup({ isOpen, onClose }) {
     phone: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [sheetData, setSheetData] = useState([]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -15,22 +18,110 @@ export default function UserInfoPopup({ isOpen, onClose }) {
     }));
   };
 
+  // Normalize phone numbers to compare reliably (keeps digits only, trims leading 0s except country code '91')
+  const normalizePhone = (val) => {
+    if (!val) return "";
+    const digits = String(val).replace(/\D/g, "");
+    // If starts with 91 and length >= 12, keep. Else remove leading zeros.
+    if (digits.startsWith("91") && digits.length >= 12) return digits;
+    return digits.replace(/^0+/, "");
+  };
+
+  const isDuplicateNumber = (phone) => {
+    const target = normalizePhone(phone);
+    if (!target) return false;
+    try {
+      return (sheetData || []).some((row) => {
+        // Object shape: { Name, Number } or variations in casing
+        if (row && typeof row === "object" && !Array.isArray(row)) {
+          const candidate =
+            row.Number ?? row.number ?? row.Phone ?? row.phone ?? row.WhatsApp ?? row.whatsapp ?? "";
+          return normalizePhone(candidate) === target;
+        }
+        // Array shape: [Name, Number, ...]
+        if (Array.isArray(row)) {
+          const candidate = row[1] ?? row[0] ?? "";
+          return normalizePhone(candidate) === target;
+        }
+        return false;
+      });
+    } catch {
+      return false;
+    }
+  };
+
+  const toastConfig = {
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: false,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+  };
+
+  useEffect(() => {
+    fetchSheetData();
+  }, []);
+
+  const fetchSheetData = async () => {
+    try {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbwtV8WqKoB2ag9CJoz-zEsi3HqFbm3Z5lia0h77JckgqwiRB84djIC4bXoEy9ultK0AEg/exec");
+      const data = await response.json();
+
+      if (data.status === "success") {
+        setSheetData(data.data);
+      } else {
+        toast.error("Error: " + data.message, toastConfig);
+        return [];
+      }
+    } catch (err) {
+      toast.error("Fetch failed", toastConfig);
+      return [];
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (isSubmitting) return;
+    // Client-side duplicate prevention using already-fetched sheetData
+    if (isDuplicateNumber(formData.phone)) {
+      toast.error("This number already exists in our records.", toastConfig);
+      return;
+    }
 
     try {
       setIsSubmitting(true);
-      // Save to session storage
-      sessionStorage.setItem("userInfo", JSON.stringify(formData));
 
-      // Small delay to ensure storage is updated
-      await new Promise((resolve) => setTimeout(resolve, 100));
+      // Prepare form data
+      const params = new URLSearchParams();
+      params.append("Name", formData.name);
+      params.append("Number", formData.phone);
 
-      // Close popup
-      onClose();
+      // Replace with your deployed web app URL
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbwN42ThiHWprgmxQnI_nR_Bz3-v20cWehALZtBx3eIjb63oWQOXJ63mdMTvCXUh_wRQpg/exec",
+        {
+          method: "POST",
+          body: params,
+        }
+      );
+
+      const data = await response.json();
+
+      if (data.status === "success") {
+        // Show success toast and close popup
+        toast.success("Your details have been submitted successfully!", toastConfig);
+        // Refresh local cache to include the newly added number
+        try { await fetchSheetData(); } catch {}
+        onClose?.();
+      } else {
+        toast.error(data.message ? `Error: ${data.message}` : "Something went wrong", toastConfig);
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
+      toast.error("Failed to connect to Google Sheets.", toastConfig);
     } finally {
       setIsSubmitting(false);
     }
