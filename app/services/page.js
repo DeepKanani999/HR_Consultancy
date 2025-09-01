@@ -73,7 +73,7 @@ const Services = () => {
 
   return (
     <Layout>
-      <PageBanner title={"HR Services"} />
+      <PageBanner title={"Services"} />
       <section className="products-area pt-120 pb-120">
         <div
           className={`floating-social-bar ${showBar ? "visible" : ""}`}
@@ -83,13 +83,16 @@ const Services = () => {
             left: "50%",
             transform: `translate(-50%, ${showBar ? "0%" : "100%"})`,
             width: "80%",
-            backgroundColor: "#fff",
+            background: "rgba(255, 255, 255, 0.18)",
+            backdropFilter: "blur(12px)",
+            WebkitBackdropFilter: "blur(12px)",
+            border: "1px solid rgba(255, 255, 255, 0.3)",
             zIndex: 9999,
             justifyContent: "",
             alignItems: "center",
             transition: "transform 0.3s ease-in-out",
             borderRadius: "10px 10px 10px 10px",
-            boxShadow: "0 -2px 10px rgba(0, 0, 0, 0.2)",
+            boxShadow: "0 8px 24px rgba(0, 0, 0, 0.08)",
           }}
         >
           <div
@@ -279,261 +282,6 @@ const Services = () => {
             </div>
           </div>
         </div>
-        {/* <div className="container">
-          <div className="products-item-wrapper">
-            <div className="row">
-              {products.map((val) => {
-                return (
-                  <div className="col-lg-4 col-md-6 col-sm-12">
-                    <div className="products-item products-item-one mb-25 wow fadeInUp">
-                      <div className="product-img">
-                        <Link href={`/product-details/${val.slug}`}>
-                          <img
-                            src={val?.image}
-                            alt="products Image"
-                            className="w-full h-auto object-cover rounded-lg"
-                          />
-                        
-                        <div className="product-overlay d-flex align-items-end justify-content-center">
-                          <div className="product-meta">
-                            <a href={val?.image} className="icon img-popup">
-                              <i className="ti-zoom-in" />
-                            </a>
-                          </div>
-                        </div>
-                        </Link>
-                      </div>
-                      <div className="product-info text-center">
-                        <h3 className="title">
-                          <Link href={`/product-details/${val.slug}`}>
-                            {val.name}
-                          </Link>
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-              <div className="col-lg-4 col-md-6 col-sm-12">
-                <div className="products-item products-item-one mb-25 wow fadeInUp">
-                  <div className="product-img">
-                    <img
-                      src="assets/images/products/products-2.jpg"
-                      alt="products Image"
-                    />
-                    <div className="product-overlay d-flex align-items-end justify-content-center">
-                      <div className="product-meta">
-                        <a
-                          href="assets/images/products/products-2.jpg"
-                          className="icon img-popup"
-                        >
-                          <i className="ti-zoom-in" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="product-info text-center">
-                    <h3 className="title">
-                      <Link href="/product-details">Green Plastic Light</Link>
-                    </h3>
-                    <span className="price">$120.00</span>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6 col-sm-12">
-                <div className="products-item products-item-one mb-25 wow fadeInUp">
-                  <div className="product-img">
-                    <img
-                      src="assets/images/products/products-3.jpg"
-                      alt="products Image"
-                    />
-                    <div className="product-overlay d-flex align-items-end justify-content-center">
-                      <div className="product-meta">
-                        <a
-                          href="assets/images/products/products-3.jpg"
-                          className="icon img-popup"
-                        >
-                          <i className="ti-zoom-in" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="product-info text-center">
-                    <h3 className="title">
-                      <Link href="/product-details">Leaser Photography</Link>
-                    </h3>
-                    <span className="price">$320.00</span>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6 col-sm-12">
-                <div className="products-item products-item-one mb-25 wow fadeInUp">
-                  <div className="product-img">
-                    <img
-                      src="assets/images/products/products-4.jpg"
-                      alt="products Image"
-                    />
-                    <div className="product-overlay d-flex align-items-end justify-content-center">
-                      <div className="product-meta">
-                        <a
-                          href="assets/images/products/products-4.jpg"
-                          className="icon img-popup"
-                        >
-                          <i className="ti-zoom-in" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="product-info text-center">
-                    <h3 className="title">
-                      <Link href="/product-details">Nike Sports Shoe</Link>
-                    </h3>
-                    <span className="price">$232.00</span>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6 col-sm-12">
-                <div className="products-item products-item-one mb-25 wow fadeInUp">
-                  <div className="product-img">
-                    <img
-                      src="assets/images/products/products-5.jpg"
-                      alt="products Image"
-                    />
-                    <div className="product-overlay d-flex align-items-end justify-content-center">
-                      <div className="product-meta">
-                        <a
-                          href="assets/images/products/products-5.jpg"
-                          className="icon img-popup"
-                        >
-                          <i className="ti-zoom-in" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="product-info text-center">
-                    <h3 className="title">
-                      <Link href="/product-details">Room Decorator</Link>
-                    </h3>
-                    <span className="price">$320.00</span>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6 col-sm-12">
-                <div className="products-item products-item-one mb-25 wow fadeInUp">
-                  <div className="product-img">
-                    <img
-                      src="assets/images/products/products-6.jpg"
-                      alt="products Image"
-                    />
-                    <div className="product-overlay d-flex align-items-end justify-content-center">
-                      <div className="product-meta">
-                        <a
-                          href="assets/images/products/products-6.jpg"
-                          className="icon img-popup"
-                        >
-                          <i className="ti-zoom-in" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="product-info text-center">
-                    <h3 className="title">
-                      <Link href="/product-details">Card Showcase</Link>
-                    </h3>
-                    <span className="price">$852.00</span>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6 col-sm-12">
-                <div className="products-item products-item-one mb-25 wow fadeInUp">
-                  <div className="product-img">
-                    <img
-                      src="assets/images/products/products-7.jpg"
-                      alt="products Image"
-                    />
-                    <div className="product-overlay d-flex align-items-end justify-content-center">
-                      <div className="product-meta">
-                        <a
-                          href="assets/images/products/products-7.jpg"
-                          className="icon img-popup"
-                        >
-                          <i className="ti-zoom-in" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="product-info text-center">
-                    <h3 className="title">
-                      <Link href="/product-details">Hand Watch</Link>
-                    </h3>
-                    <span className="price">$25.00</span>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6 col-sm-12">
-                <div className="products-item products-item-one mb-25 wow fadeInUp">
-                  <div className="product-img">
-                    <img
-                      src="assets/images/products/products-8.jpg"
-                      alt="products Image"
-                    />
-                    <div className="product-overlay d-flex align-items-end justify-content-center">
-                      <div className="product-meta">
-                        <a
-                          href="assets/images/products/products-8.jpg"
-                          className="icon img-popup"
-                        >
-                          <i className="ti-zoom-in" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="product-info text-center">
-                    <h3 className="title">
-                      <Link href="/product-details">Realstic Dumbell</Link>
-                    </h3>
-                    <span className="price">$50.00</span>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6 col-sm-12">
-                <div className="products-item products-item-one mb-25 wow fadeInUp">
-                  <div className="product-img">
-                    <img
-                      src="assets/images/products/products-9.jpg"
-                      alt="products Image"
-                    />
-                    <div className="product-overlay d-flex align-items-end justify-content-center">
-                      <div className="product-meta">
-                        <a
-                          href="assets/images/products/products-9.jpg"
-                          className="icon img-popup"
-                        >
-                          <i className="ti-zoom-in" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="product-info text-center">
-                    <h3 className="title">
-                      <Link href="/product-details">Hand Speaker</Link>
-                    </h3>
-                    <span className="price">$250.00</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="button text-center mt-50 wow fadeInUp">
-                  <a href="#" className="main-btn">
-                    Load More
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
         <div className="container">
           <div className="products-item-wrapper">
             <div className="row">
@@ -552,9 +300,12 @@ const Services = () => {
                           display: "flex",
                         }}
                       >
-                        <Link href={`/product-details/${val.slug}`} style={{width:"100%"}}>
+                        <Link
+                          href={`/product-details/${val.slug}`}
+                          style={{ width: "100%" }}
+                        >
                           <img
-                            src={val.image} // <-- Update TV image here
+                            src={val.image}
                             alt="services image"
                             style={{ objectFit: "cover", width: "100%" }}
                           />
@@ -566,43 +317,31 @@ const Services = () => {
                           Featured
                         </span> */}
                       </div>
-                      <div className="listing-content">
-                        <h4 className="title" style={{ textAlign: "center" }}>
-                          <Link href={`/product-details/${val.slug}`}>
-                            {val.service}
-                          </Link>{" "}
-                        </h4>
-                        <p
-                          style={{
-                            display: "-webkit-box",
-                            WebkitBoxOrient: "vertical",
-                            WebkitLineClamp: 5,
-                            overflow: "hidden",
-                            textOverflow: "ellipsis",
-                            maxWidth: "300px",
-                            lineHeight: "1.5",
-                            marginBottom: "15px",
-                            textAlign: "center",
-                            marginTop: "10px",
-                          }}
-                        >
-                          {val.detail}
-                        </p>{" "}
-                        {/* <div className="features-list">
-                          <ul>
-                            {" "}
-                            <li
-                              style={{
-                                color: "#000",
-                                fontSize: "16px",
-                                fontWeight: "bold",
-                              }}
-                            >
-                              {"Smart TV"}
-                            </li>
-                          </ul>
-                        </div> */}
-                        <span className="phone-meta"></span>
+                      <div className="listing-content" style={{ marginBottom: "30px"}}>
+                        <div style={{ maxHeight: "165px", overflow: "hidden" }}>
+                          <h4 className="title" style={{ textAlign: "center" }}>
+                            <Link href={`/product-details/${val.slug}`}>
+                              {val.service}
+                            </Link>{" "}
+                          </h4>
+                          <p
+                            style={{
+                              display: "-webkit-box",
+                              WebkitBoxOrient: "vertical",
+                              WebkitLineClamp: 5,
+                              overflow: "hidden",
+                              textOverflow: "ellipsis",
+                              maxWidth: "300px",
+                              lineHeight: "1.45",
+                              marginBottom: "15px",
+                              textAlign: "center",
+                              marginTop: "10px",
+                            }}
+                          >
+                            {val.detail}
+                          </p>{" "}
+                          <span className="phone-meta"></span>
+                        </div>
                         <div className="listing-meta">
                           <ul
                             style={{
@@ -622,7 +361,7 @@ const Services = () => {
                                 }}
                               >
                                 <div
-                                  className="flex items-center gap-2 px-3 py-1 mt-1 mb-3 rounded-lg transition"
+                                  className="flex items-center gap-2 px-3 py-1 mt-1 rounded-lg transition"
                                   style={{
                                     // backgroundColor: "#69C8C7",
                                     border: "1px solid #69C8C7",
@@ -630,7 +369,7 @@ const Services = () => {
                                     flexDirection: "row",
                                     alignItems: "center",
                                     justifyContent: "center",
-                                    marginBottom: "30px",
+                                    // marginBottom: "30px",
                                     width: "100%", // Makes the button take full width
                                   }}
                                 >
@@ -650,35 +389,6 @@ const Services = () => {
                         </div>
                       </div>
                     </div>
-                    {/* <div className="products-item products-item-one mb-25 wow fadeInUp">
-                      <div className="product-img">
-                        <Link href={`/product-details/${val.slug}`}>
-                          <img
-                            src={val?.image}
-                            alt="products Image"
-                            className="w-full h-auto object-cover rounded-lg"
-                          />
-                        </Link>
-                        <div className="product-overlay d-flex align-items-end justify-content-center">
-                          <div className="product-meta">
-                            <a href={val?.image} className="icon img-popup">
-                              <i className="ti-zoom-in" />
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="product-info text-center">
-                        <h3 className="title">
-                          <Link href={`/product-details/${val.slug}`}>
-                            {val.name}
-                          </Link>
-                        </h3>
-                        <p>
-                          {val.detail}
-                        </p>
-                      </div>
-
-                    </div> */}
                   </div>
                 );
               })}

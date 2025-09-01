@@ -178,7 +178,7 @@ const Footer = () => {
                         </span>
                         <h6 className="title">
                           <Link href="#" style={{ color: "#fff" }}>
-                            Discover premium HR solutions designed to streamline
+                            Discover HR solutions designed to streamline
                             hiring, enhance employee engagement, and ensure
                             compliance—empowering your business with a smarter
                             workforce strategy.
@@ -212,13 +212,16 @@ const Footer = () => {
                       <a href="#">Home</a>
                     </li>
                     <li>
-                      <a href="/about">About Us</a>
+                      <a href="/about">About</a>
                     </li>
                     <li>
-                      <a href="/products">Products</a>
+                      <a href="/services">Services</a>
                     </li>
                     <li>
-                      <a href="/contact">Contact Us</a>
+                      <a href="/career">Career</a>
+                    </li>
+                    <li>
+                      <a href="/contact">Contact</a>
                     </li>
                   </ul>
                 </div>
@@ -270,7 +273,7 @@ const Footer = () => {
                         }}
                         style={{ backgroundColor: "#fff" }}
                       >
-                        Send Message
+                        Submit Inquiry
                       </button>
                     </div>
                   </form>

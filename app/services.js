@@ -72,7 +72,7 @@ export const services = [
       "Resource Optimization",
       "Innovation Programs",
     ],
-    service: "Organizational HR Services & Support",
+    service: "HR Services & Support",
     backgroundColor: "#E8DFF5",
   },
 ];

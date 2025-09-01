@@ -150,13 +150,16 @@ const PrivacyPolicy = () => {
           left: "50%",
           transform: `translate(-50%, ${showBar ? "0%" : "100%"})`,
           width: "80%",
-          backgroundColor: "#fff",
+          background: "rgba(255, 255, 255, 0.18)",
+          backdropFilter: "blur(12px)",
+          WebkitBackdropFilter: "blur(12px)",
+          border: "1px solid rgba(255, 255, 255, 0.3)",
           zIndex: 9999,
           justifyContent: "",
           alignItems: "center",
           transition: "transform 0.3s ease-in-out",
           borderRadius: "10px 10px 10px 10px",
-          boxShadow: "0 -2px 10px rgba(0, 0, 0, 0.2)",
+          boxShadow: "0 8px 24px rgba(0, 0, 0, 0.08)",
         }}
       >
         <div

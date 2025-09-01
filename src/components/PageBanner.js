@@ -3,8 +3,8 @@ import React from "react";
 
 const PageBanner = ({ pageName, title }) => {
   return (
-    <section className="hero-area">
-      <div className="breadcrumbs-wrapper">
+    <section className="hero-area" style={{ paddingTop: "100px" }}>
+      <div className="breadcrumbs-wrapper" >
         <div className="container">
           <div className="row">
             <div className="col-lg-8">
